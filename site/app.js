@@ -11,6 +11,7 @@ const RANGES = [['1', '1Y'], ['5', '5Y'], ['10', '10Y'], ['max', 'MAX']];
 const TABLE_ROWS = 1000;
 
 let IDX = null;
+let DATA_SOURCE = 'local'; // 'live' (GitHub), 'bundled' (fallback copy shipped with the deploy) or 'local'
 const CACHE = new Map();
 const S = { rec: null, view: 0, range: 'max', table: false, chart: null, hidden: new Set() };
 
@@ -48,7 +49,11 @@ async function getData(path) {
   const bases = window.DATA_BASE ? [window.DATA_BASE, 'data/'] : ['data/'];
   let last;
   for (const b of bases) {
-    try { return await getJSON(b + path); } catch (e) { last = e; }
+    try {
+      const data = await getJSON(b + path);
+      if (path === 'index.json') DATA_SOURCE = b === 'data/' ? (window.DATA_BASE ? 'bundled' : 'local') : 'live';
+      return data;
+    } catch (e) { last = e; }
   }
   throw last;
 }
@@ -606,7 +611,10 @@ async function boot() {
     $('#app').innerHTML = '<p class="empty">Data not found. Run <code>python scraper/scrape.py</code> first.</p>';
     return;
   }
-  $('#foot-meta').textContent = `Data last refreshed ${new Date(IDX.generated_at).toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' })}.`;
+  const when = new Date(IDX.generated_at).toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' });
+  $('#foot-meta').textContent = DATA_SOURCE === 'bundled'
+    ? `Warning: live data could not be reached, so this page is showing a saved copy from ${when}. Reload later for the latest.`
+    : `Latest data update: ${when}${DATA_SOURCE === 'live' ? ' (live, checked every 2 hours).' : '.'}`;
   setupSearch();
   route();
 }
