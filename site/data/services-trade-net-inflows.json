@@ -1,0 +1,1514 @@
+{
+ "slug": "services-trade-net-inflows",
+ "category": "Services Sector Activity",
+ "title": "Services Trade- Net Inflows",
+ "description": "India's net services trade inflows stand at $ 16,537 Million for Aug 2026. India runs a consistent services surplus, driven largely by IT exports.",
+ "headline": {
+  "Absolute": "India's net services trade inflows stand at $ 16,537 Million for Aug 2026. India runs a consistent services surplus, driven largely by IT exports.",
+  "Y-o-Y": "India's net services trade inflows stand at 6.01% for Aug 2026. India runs a consistent services surplus, driven largely by IT exports."
+ },
+ "source": "CMIE Economic Outlook, 1 Finance Research",
+ "source_url": "https://economicoutlook.cmie.com/",
+ "frequency": "M",
+ "has_yoy_toggle": true,
+ "date_modified": "2026-08-01",
+ "temporal_coverage": "2011-04-01/2026-08-01",
+ "page_url": "https://indiamacroindicators.co.in/economic-indicators/services-trade-net-inflows",
+ "scraped_at": "2026-10-08T18:39:11+00:00",
+ "qna": [
+  {
+   "question": "What does the Net Inflows - Services Trade data represent?",
+   "answer": "This data represents the net balance of trade in services, capturing the difference between the value of services exported and the value of services imported by India.^It includes various categories of services such as IT and IT-enabled services, tourism, financial services, education, healthcare, and other professional services. The data is typically analysed in terms of export earnings and import expenditures on these services."
+  },
+  {
+   "question": "How to interpret the Net Inflows - Services Trade data?",
+   "answer": "Dissecting the data by specific service sectors can reveal which sectors are driving growth and which are lagging, helping to identify areas for policy intervention or market opportunity.^This data can be correlated with other economic indicators such as GDP growth, foreign exchange reserves, and Balance of Payments (BoP) position to gain a comprehensive view of India's economic health."
+  },
+  {
+   "question": "What is the significance of the Net Inflows - Services Trade data  ?",
+   "answer": "The balance of services trade reflects global demand for Indian services, global competitiveness, technological advancements, and India's integration into the global economy.^Net inflows in services trade data helps in assessing the effectiveness of trade policies, bilateral agreements, and other strategic initiatives aimed at promoting service exports or managing service imports.^Trends in net inflows can provide insights into global market dynamics, demand for Indian services abroad, and domestic demand for foreign services."
+  }
+ ],
+ "data": [
+  {
+   "unix_date": 1301616000,
+   "date": "2011-04-01",
+   "value": 4580,
+   "units": "$$ Million",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1304208000,
+   "date": "2011-05-01",
+   "value": 4747,
+   "units": "$$ Million",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1306886400,
+   "date": "2011-06-01",
+   "value": 3835,
+   "units": "$$ Million",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1309478400,
+   "date": "2011-07-01",
+   "value": 4506,
+   "units": "$$ Million",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1312156800,
+   "date": "2011-08-01",
+   "value": 5037,
+   "units": "$$ Million",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1314835200,
+   "date": "2011-09-01",
+   "value": 4429,
+   "units": "$$ Million",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1317427200,
+   "date": "2011-10-01",
+   "value": 4635,
+   "units": "$$ Million",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1320105600,
+   "date": "2011-11-01",
+   "value": 3876,
+   "units": "$$ Million",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1322697600,
+   "date": "2011-12-01",
+   "value": 3525,
+   "units": "$$ Million",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1325376000,
+   "date": "2012-01-01",
+   "value": 3695,
+   "units": "$$ Million",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1328054400,
+   "date": "2012-02-01",
+   "value": 4476,
+   "units": "$$ Million",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1330560000,
+   "date": "2012-03-01",
+   "value": 3811,
+   "units": "$$ Million",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1333238400,
+   "date": "2012-04-01",
+   "value": 3974,
+   "units": "$$ Million",
+   "yoy": -13.23,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1335830400,
+   "date": "2012-05-01",
+   "value": 4341,
+   "units": "$$ Million",
+   "yoy": -8.55,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1338508800,
+   "date": "2012-06-01",
+   "value": 4526,
+   "units": "$$ Million",
+   "yoy": 18.02,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1341100800,
+   "date": "2012-07-01",
+   "value": 4565,
+   "units": "$$ Million",
+   "yoy": 1.31,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1343779200,
+   "date": "2012-08-01",
+   "value": 4794,
+   "units": "$$ Million",
+   "yoy": -4.82,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1346457600,
+   "date": "2012-09-01",
+   "value": 5802,
+   "units": "$$ Million",
+   "yoy": 31,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1349049600,
+   "date": "2012-10-01",
+   "value": 5645,
+   "units": "$$ Million",
+   "yoy": 21.79,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1351728000,
+   "date": "2012-11-01",
+   "value": 5411,
+   "units": "$$ Million",
+   "yoy": 39.6,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1354320000,
+   "date": "2012-12-01",
+   "value": 6120,
+   "units": "$$ Million",
+   "yoy": 73.62,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1356998400,
+   "date": "2013-01-01",
+   "value": 6377,
+   "units": "$$ Million",
+   "yoy": 72.58,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1359676800,
+   "date": "2013-02-01",
+   "value": 5938,
+   "units": "$$ Million",
+   "yoy": 32.66,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1362096000,
+   "date": "2013-03-01",
+   "value": 5448,
+   "units": "$$ Million",
+   "yoy": 42.95,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1364774400,
+   "date": "2013-04-01",
+   "value": 5464,
+   "units": "$$ Million",
+   "yoy": 37.49,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1367366400,
+   "date": "2013-05-01",
+   "value": 5816,
+   "units": "$$ Million",
+   "yoy": 33.98,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1370044800,
+   "date": "2013-06-01",
+   "value": 6129,
+   "units": "$$ Million",
+   "yoy": 35.42,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1372636800,
+   "date": "2013-07-01",
+   "value": 6322,
+   "units": "$$ Million",
+   "yoy": 38.49,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1375315200,
+   "date": "2013-08-01",
+   "value": 6015,
+   "units": "$$ Million",
+   "yoy": 25.47,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1377993600,
+   "date": "2013-09-01",
+   "value": 5498,
+   "units": "$$ Million",
+   "yoy": -5.24,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1380585600,
+   "date": "2013-10-01",
+   "value": 5599,
+   "units": "$$ Million",
+   "yoy": -0.81,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1383264000,
+   "date": "2013-11-01",
+   "value": 6200,
+   "units": "$$ Million",
+   "yoy": 14.58,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1385856000,
+   "date": "2013-12-01",
+   "value": 6144,
+   "units": "$$ Million",
+   "yoy": 0.39,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1388534400,
+   "date": "2014-01-01",
+   "value": 6659,
+   "units": "$$ Million",
+   "yoy": 4.42,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1391212800,
+   "date": "2014-02-01",
+   "value": 6769,
+   "units": "$$ Million",
+   "yoy": 13.99,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1393632000,
+   "date": "2014-03-01",
+   "value": 5829,
+   "units": "$$ Million",
+   "yoy": 6.99,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1396310400,
+   "date": "2014-04-01",
+   "value": 5574,
+   "units": "$$ Million",
+   "yoy": 2.01,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1398902400,
+   "date": "2014-05-01",
+   "value": 5893,
+   "units": "$$ Million",
+   "yoy": 1.32,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1401580800,
+   "date": "2014-06-01",
+   "value": 5778,
+   "units": "$$ Million",
+   "yoy": -5.73,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1404172800,
+   "date": "2014-07-01",
+   "value": 6522,
+   "units": "$$ Million",
+   "yoy": 3.16,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1406851200,
+   "date": "2014-08-01",
+   "value": 5475,
+   "units": "$$ Million",
+   "yoy": -8.98,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1409529600,
+   "date": "2014-09-01",
+   "value": 6766,
+   "units": "$$ Million",
+   "yoy": 23.06,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1412121600,
+   "date": "2014-10-01",
+   "value": 6204,
+   "units": "$$ Million",
+   "yoy": 10.81,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1414800000,
+   "date": "2014-11-01",
+   "value": 6318,
+   "units": "$$ Million",
+   "yoy": 1.9,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1417392000,
+   "date": "2014-12-01",
+   "value": 7063,
+   "units": "$$ Million",
+   "yoy": 14.96,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1420070400,
+   "date": "2015-01-01",
+   "value": 6462,
+   "units": "$$ Million",
+   "yoy": -2.96,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1422748800,
+   "date": "2015-02-01",
+   "value": 6203,
+   "units": "$$ Million",
+   "yoy": -8.36,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1425168000,
+   "date": "2015-03-01",
+   "value": 6183,
+   "units": "$$ Million",
+   "yoy": 6.07,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1427846400,
+   "date": "2015-04-01",
+   "value": 5688,
+   "units": "$$ Million",
+   "yoy": 2.05,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1430438400,
+   "date": "2015-05-01",
+   "value": 5556,
+   "units": "$$ Million",
+   "yoy": -5.72,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1433116800,
+   "date": "2015-06-01",
+   "value": 5243,
+   "units": "$$ Million",
+   "yoy": -9.26,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1435708800,
+   "date": "2015-07-01",
+   "value": 5884,
+   "units": "$$ Million",
+   "yoy": -9.78,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1438387200,
+   "date": "2015-08-01",
+   "value": 5807,
+   "units": "$$ Million",
+   "yoy": 6.06,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1441065600,
+   "date": "2015-09-01",
+   "value": 5864,
+   "units": "$$ Million",
+   "yoy": -13.33,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1443657600,
+   "date": "2015-10-01",
+   "value": 6331,
+   "units": "$$ Million",
+   "yoy": 2.05,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1446336000,
+   "date": "2015-11-01",
+   "value": 6333,
+   "units": "$$ Million",
+   "yoy": 0.24,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1448928000,
+   "date": "2015-12-01",
+   "value": 6851,
+   "units": "$$ Million",
+   "yoy": -3,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1451606400,
+   "date": "2016-01-01",
+   "value": 5732,
+   "units": "$$ Million",
+   "yoy": -11.3,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1454284800,
+   "date": "2016-02-01",
+   "value": 5140,
+   "units": "$$ Million",
+   "yoy": -17.14,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1456790400,
+   "date": "2016-03-01",
+   "value": 4990,
+   "units": "$$ Million",
+   "yoy": -19.29,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1459468800,
+   "date": "2016-04-01",
+   "value": 5725,
+   "units": "$$ Million",
+   "yoy": 0.65,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1462060800,
+   "date": "2016-05-01",
+   "value": 5538,
+   "units": "$$ Million",
+   "yoy": -0.32,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1464739200,
+   "date": "2016-06-01",
+   "value": 4933,
+   "units": "$$ Million",
+   "yoy": -5.91,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1467331200,
+   "date": "2016-07-01",
+   "value": 5366,
+   "units": "$$ Million",
+   "yoy": -8.8,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1470009600,
+   "date": "2016-08-01",
+   "value": 5327,
+   "units": "$$ Million",
+   "yoy": -8.27,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1472688000,
+   "date": "2016-09-01",
+   "value": 5469,
+   "units": "$$ Million",
+   "yoy": -6.74,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1475280000,
+   "date": "2016-10-01",
+   "value": 5433,
+   "units": "$$ Million",
+   "yoy": -14.18,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1477958400,
+   "date": "2016-11-01",
+   "value": 5015,
+   "units": "$$ Million",
+   "yoy": -20.81,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1480550400,
+   "date": "2016-12-01",
+   "value": 5510,
+   "units": "$$ Million",
+   "yoy": -19.57,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1483228800,
+   "date": "2017-01-01",
+   "value": 5161,
+   "units": "$$ Million",
+   "yoy": -9.96,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1485907200,
+   "date": "2017-02-01",
+   "value": 5825,
+   "units": "$$ Million",
+   "yoy": 13.33,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1488326400,
+   "date": "2017-03-01",
+   "value": 5912,
+   "units": "$$ Million",
+   "yoy": 18.48,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1491004800,
+   "date": "2017-04-01",
+   "value": 5682,
+   "units": "$$ Million",
+   "yoy": -0.75,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1493596800,
+   "date": "2017-05-01",
+   "value": 5815,
+   "units": "$$ Million",
+   "yoy": 5,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1496275200,
+   "date": "2017-06-01",
+   "value": 5931,
+   "units": "$$ Million",
+   "yoy": 20.23,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1498867200,
+   "date": "2017-07-01",
+   "value": 5844,
+   "units": "$$ Million",
+   "yoy": 8.91,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1501545600,
+   "date": "2017-08-01",
+   "value": 5043,
+   "units": "$$ Million",
+   "yoy": -5.33,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1504224000,
+   "date": "2017-09-01",
+   "value": 5282,
+   "units": "$$ Million",
+   "yoy": -3.42,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1506816000,
+   "date": "2017-10-01",
+   "value": 5452,
+   "units": "$$ Million",
+   "yoy": 0.35,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1509494400,
+   "date": "2017-11-01",
+   "value": 5745,
+   "units": "$$ Million",
+   "yoy": 14.56,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1512086400,
+   "date": "2017-12-01",
+   "value": 6146,
+   "units": "$$ Million",
+   "yoy": 11.54,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1514764800,
+   "date": "2018-01-01",
+   "value": 6490,
+   "units": "$$ Million",
+   "yoy": 25.75,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1517443200,
+   "date": "2018-02-01",
+   "value": 5566,
+   "units": "$$ Million",
+   "yoy": -4.45,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1519862400,
+   "date": "2018-03-01",
+   "value": 6554,
+   "units": "$$ Million",
+   "yoy": 10.86,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1522540800,
+   "date": "2018-04-01",
+   "value": 6648,
+   "units": "$$ Million",
+   "yoy": 17,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1525132800,
+   "date": "2018-05-01",
+   "value": 5965,
+   "units": "$$ Million",
+   "yoy": 2.58,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1527811200,
+   "date": "2018-06-01",
+   "value": 6573,
+   "units": "$$ Million",
+   "yoy": 10.82,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1530403200,
+   "date": "2018-07-01",
+   "value": 6703,
+   "units": "$$ Million",
+   "yoy": 14.7,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1533081600,
+   "date": "2018-08-01",
+   "value": 6172,
+   "units": "$$ Million",
+   "yoy": 22.39,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1535760000,
+   "date": "2018-09-01",
+   "value": 6435,
+   "units": "$$ Million",
+   "yoy": 21.83,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1538352000,
+   "date": "2018-10-01",
+   "value": 6716,
+   "units": "$$ Million",
+   "yoy": 23.18,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1541030400,
+   "date": "2018-11-01",
+   "value": 6568,
+   "units": "$$ Million",
+   "yoy": 14.33,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1543622400,
+   "date": "2018-12-01",
+   "value": 6551,
+   "units": "$$ Million",
+   "yoy": 6.59,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1546300800,
+   "date": "2019-01-01",
+   "value": 6718,
+   "units": "$$ Million",
+   "yoy": 3.51,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1548979200,
+   "date": "2019-02-01",
+   "value": 6775,
+   "units": "$$ Million",
+   "yoy": 21.72,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1551398400,
+   "date": "2019-03-01",
+   "value": 6579,
+   "units": "$$ Million",
+   "yoy": 0.38,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1554076800,
+   "date": "2019-04-01",
+   "value": 6660,
+   "units": "$$ Million",
+   "yoy": 0.18,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1556668800,
+   "date": "2019-05-01",
+   "value": 6187,
+   "units": "$$ Million",
+   "yoy": 3.72,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1559347200,
+   "date": "2019-06-01",
+   "value": 6920,
+   "units": "$$ Million",
+   "yoy": 5.28,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1561939200,
+   "date": "2019-07-01",
+   "value": 6990,
+   "units": "$$ Million",
+   "yoy": 4.28,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1564617600,
+   "date": "2019-08-01",
+   "value": 6910,
+   "units": "$$ Million",
+   "yoy": 11.96,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1567296000,
+   "date": "2019-09-01",
+   "value": 7040,
+   "units": "$$ Million",
+   "yoy": 9.4,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1569888000,
+   "date": "2019-10-01",
+   "value": 7170,
+   "units": "$$ Million",
+   "yoy": 6.76,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1572566400,
+   "date": "2019-11-01",
+   "value": 6880,
+   "units": "$$ Million",
+   "yoy": 4.75,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1575158400,
+   "date": "2019-12-01",
+   "value": 7830,
+   "units": "$$ Million",
+   "yoy": 19.52,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1577836800,
+   "date": "2020-01-01",
+   "value": 7460,
+   "units": "$$ Million",
+   "yoy": 11.04,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1580515200,
+   "date": "2020-02-01",
+   "value": 7090,
+   "units": "$$ Million",
+   "yoy": 4.65,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1583020800,
+   "date": "2020-03-01",
+   "value": 7470,
+   "units": "$$ Million",
+   "yoy": 13.54,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1585699200,
+   "date": "2020-04-01",
+   "value": 7149,
+   "units": "$$ Million",
+   "yoy": 7.34,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1588291200,
+   "date": "2020-05-01",
+   "value": 6828,
+   "units": "$$ Million",
+   "yoy": 10.36,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1590969600,
+   "date": "2020-06-01",
+   "value": 6950,
+   "units": "$$ Million",
+   "yoy": 0.43,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1593561600,
+   "date": "2020-07-01",
+   "value": 7020,
+   "units": "$$ Million",
+   "yoy": 0.43,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1596240000,
+   "date": "2020-08-01",
+   "value": 6880,
+   "units": "$$ Million",
+   "yoy": -0.43,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1598918400,
+   "date": "2020-09-01",
+   "value": 7190,
+   "units": "$$ Million",
+   "yoy": 2.13,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1601510400,
+   "date": "2020-10-01",
+   "value": 7680,
+   "units": "$$ Million",
+   "yoy": 7.11,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1604188800,
+   "date": "2020-11-01",
+   "value": 7610,
+   "units": "$$ Million",
+   "yoy": 10.61,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1606780800,
+   "date": "2020-12-01",
+   "value": 7940,
+   "units": "$$ Million",
+   "yoy": 1.4,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1609459200,
+   "date": "2021-01-01",
+   "value": 7490,
+   "units": "$$ Million",
+   "yoy": 0.4,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1612137600,
+   "date": "2021-02-01",
+   "value": 7460,
+   "units": "$$ Million",
+   "yoy": 5.22,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1614556800,
+   "date": "2021-03-01",
+   "value": 8540,
+   "units": "$$ Million",
+   "yoy": 14.32,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1617235200,
+   "date": "2021-04-01",
+   "value": 8440,
+   "units": "$$ Million",
+   "yoy": 18.06,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1619827200,
+   "date": "2021-05-01",
+   "value": 7910,
+   "units": "$$ Million",
+   "yoy": 15.85,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1622505600,
+   "date": "2021-06-01",
+   "value": 9460,
+   "units": "$$ Million",
+   "yoy": 36.12,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1625097600,
+   "date": "2021-07-01",
+   "value": 7970,
+   "units": "$$ Million",
+   "yoy": 13.53,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1627776000,
+   "date": "2021-08-01",
+   "value": 8580,
+   "units": "$$ Million",
+   "yoy": 24.71,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1630454400,
+   "date": "2021-09-01",
+   "value": 9030,
+   "units": "$$ Million",
+   "yoy": 25.59,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1633046400,
+   "date": "2021-10-01",
+   "value": 8730,
+   "units": "$$ Million",
+   "yoy": 13.67,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1635724800,
+   "date": "2021-11-01",
+   "value": 8040,
+   "units": "$$ Million",
+   "yoy": 5.65,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1638316800,
+   "date": "2021-12-01",
+   "value": 11040,
+   "units": "$$ Million",
+   "yoy": 39.04,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1640995200,
+   "date": "2022-01-01",
+   "value": 8390,
+   "units": "$$ Million",
+   "yoy": 12.02,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1643673600,
+   "date": "2022-02-01",
+   "value": 8330,
+   "units": "$$ Million",
+   "yoy": 11.66,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1646092800,
+   "date": "2022-03-01",
+   "value": 11600,
+   "units": "$$ Million",
+   "yoy": 35.83,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1648771200,
+   "date": "2022-04-01",
+   "value": 9990,
+   "units": "$$ Million",
+   "yoy": 18.36,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1651363200,
+   "date": "2022-05-01",
+   "value": 9930,
+   "units": "$$ Million",
+   "yoy": 25.54,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1654041600,
+   "date": "2022-06-01",
+   "value": 11150,
+   "units": "$$ Million",
+   "yoy": 17.86,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1656633600,
+   "date": "2022-07-01",
+   "value": 10200,
+   "units": "$$ Million",
+   "yoy": 27.98,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1659312000,
+   "date": "2022-08-01",
+   "value": 11280,
+   "units": "$$ Million",
+   "yoy": 31.47,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1661990400,
+   "date": "2022-09-01",
+   "value": 12950,
+   "units": "$$ Million",
+   "yoy": 43.41,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1664582400,
+   "date": "2022-10-01",
+   "value": 11790,
+   "units": "$$ Million",
+   "yoy": 35.05,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1667260800,
+   "date": "2022-11-01",
+   "value": 11540,
+   "units": "$$ Million",
+   "yoy": 43.53,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1669852800,
+   "date": "2022-12-01",
+   "value": 15380,
+   "units": "$$ Million",
+   "yoy": 39.31,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1672531200,
+   "date": "2023-01-01",
+   "value": 13170,
+   "units": "$$ Million",
+   "yoy": 56.97,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1675209600,
+   "date": "2023-02-01",
+   "value": 12430,
+   "units": "$$ Million",
+   "yoy": 49.22,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1677628800,
+   "date": "2023-03-01",
+   "value": 13480,
+   "units": "$$ Million",
+   "yoy": 16.21,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1680307200,
+   "date": "2023-04-01",
+   "value": 11820,
+   "units": "$$ Million",
+   "yoy": 18.32,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1682899200,
+   "date": "2023-05-01",
+   "value": 11110,
+   "units": "$$ Million",
+   "yoy": 11.88,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1685577600,
+   "date": "2023-06-01",
+   "value": 12180,
+   "units": "$$ Million",
+   "yoy": 9.3,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1688169600,
+   "date": "2023-07-01",
+   "value": 12480,
+   "units": "$$ Million",
+   "yoy": 22.36,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1690848000,
+   "date": "2023-08-01",
+   "value": 13620,
+   "units": "$$ Million",
+   "yoy": 20.77,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1693526400,
+   "date": "2023-09-01",
+   "value": 13840,
+   "units": "$$ Million",
+   "yoy": 6.93,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1696118400,
+   "date": "2023-10-01",
+   "value": 14590,
+   "units": "$$ Million",
+   "yoy": 23.73,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1698796800,
+   "date": "2023-11-01",
+   "value": 14430,
+   "units": "$$ Million",
+   "yoy": 25.03,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1701388800,
+   "date": "2023-12-01",
+   "value": 16000,
+   "units": "$$ Million",
+   "yoy": 4.05,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1704067200,
+   "date": "2024-01-01",
+   "value": 16170,
+   "units": "$$ Million",
+   "yoy": 22.76,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1706745600,
+   "date": "2024-02-01",
+   "value": 13100,
+   "units": "$$ Million",
+   "yoy": 5.42,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1709251200,
+   "date": "2024-03-01",
+   "value": 13410,
+   "units": "$$ Million",
+   "yoy": -0.48,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1711929600,
+   "date": "2024-04-01",
+   "value": 13420,
+   "units": "$$ Million",
+   "yoy": 13.62,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1714521600,
+   "date": "2024-05-01",
+   "value": 12730,
+   "units": "$$ Million",
+   "yoy": 14.77,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1717200000,
+   "date": "2024-06-01",
+   "value": 13530,
+   "units": "$$ Million",
+   "yoy": 11.21,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1719792000,
+   "date": "2024-07-01",
+   "value": 14660,
+   "units": "$$ Million",
+   "yoy": 17.3,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1722470400,
+   "date": "2024-08-01",
+   "value": 13900,
+   "units": "$$ Million",
+   "yoy": 1.89,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1725148800,
+   "date": "2024-09-01",
+   "value": 16060,
+   "units": "$$ Million",
+   "yoy": 15.85,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1727740800,
+   "date": "2024-10-01",
+   "value": 17180,
+   "units": "$$ Million",
+   "yoy": 17.16,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1730419200,
+   "date": "2024-11-01",
+   "value": 14860,
+   "units": "$$ Million",
+   "yoy": 2.46,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1733011200,
+   "date": "2024-12-01",
+   "value": 19170,
+   "units": "$$ Million",
+   "yoy": -5.25,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1735689600,
+   "date": "2025-01-01",
+   "value": 18040,
+   "units": "$$ Million",
+   "yoy": 25.73,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1738368000,
+   "date": "2025-02-01",
+   "value": 17140,
+   "units": "$$ Million",
+   "yoy": 41.07,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1740787200,
+   "date": "2025-03-01",
+   "value": 18140,
+   "units": "$$ Million",
+   "yoy": 35.27,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1743465600,
+   "date": "2025-04-01",
+   "value": 15941,
+   "units": "$$ Million",
+   "yoy": 18.79,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1746057600,
+   "date": "2025-05-01",
+   "value": 15764,
+   "units": "$$ Million",
+   "yoy": 23.83,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1748736000,
+   "date": "2025-06-01",
+   "value": 16215,
+   "units": "$$ Million",
+   "yoy": 19.84,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1751328000,
+   "date": "2025-07-01",
+   "value": 16449,
+   "units": "$$ Million",
+   "yoy": 12.2,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1754006400,
+   "date": "2025-08-01",
+   "value": 15603,
+   "units": "$$ Million",
+   "yoy": 12.25,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1756684800,
+   "date": "2025-09-01",
+   "value": 18835,
+   "units": "$$ Million",
+   "yoy": 17.28,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1759276800,
+   "date": "2025-10-01",
+   "value": 17440,
+   "units": "$$ Million",
+   "yoy": 1.51,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1761955200,
+   "date": "2025-11-01",
+   "value": 17387,
+   "units": "$$ Million",
+   "yoy": 17.01,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1764547200,
+   "date": "2025-12-01",
+   "value": 22674,
+   "units": "$$ Million",
+   "yoy": 18.28,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1767225600,
+   "date": "2026-01-01",
+   "value": 21527,
+   "units": "$$ Million",
+   "yoy": 19.33,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1769904000,
+   "date": "2026-02-01",
+   "value": 17837,
+   "units": "$$ Million",
+   "yoy": 4.07,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1772323200,
+   "date": "2026-03-01",
+   "value": 20992,
+   "units": "$$ Million",
+   "yoy": 15.66,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1775001600,
+   "date": "2026-04-01",
+   "value": 18397,
+   "units": "$$ Million",
+   "yoy": 15.41,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1777593600,
+   "date": "2026-05-01",
+   "value": 15529,
+   "units": "$$ Million",
+   "yoy": -1.47,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1780272000,
+   "date": "2026-06-01",
+   "value": 17689,
+   "units": "$$ Million",
+   "yoy": 9.12,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1782864000,
+   "date": "2026-07-01",
+   "value": 17647,
+   "units": "$$ Million",
+   "yoy": 7.34,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1785542400,
+   "date": "2026-08-01",
+   "value": 16537,
+   "units": "$$ Million",
+   "yoy": 6.01,
+   "yoy_units": "Per cent"
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+# Static site: no build step. Netlify just serves the site/ folder.
+[build]
+  publish = "site"
+  # Skip the deploy when a commit only touches data. The site reads its data
+  # from GitHub at runtime, and every deploy uses up free-plan credits.
+  # (exit 0 = skip the build; a non-zero exit, e.g. on the first deploy, builds)
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- site ':(exclude)site/data'"
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

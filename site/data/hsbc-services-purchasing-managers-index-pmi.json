@@ -1,0 +1,1321 @@
+{
+ "slug": "hsbc-services-purchasing-managers-index-pmi",
+ "category": "Services Sector Activity",
+ "title": "HSBC Services PMI",
+ "description": "India's services PMI stands at 55.2 for Sep 2026. Services make up over half of India's economy, making this an early growth signal.",
+ "headline": {
+  "Absolute": "India's services PMI stands at 55.2 for Sep 2026. Services make up over half of India's economy, making this an early growth signal."
+ },
+ "source": "CMIE Economic Outlook, 1 Finance Research",
+ "source_url": "https://economicoutlook.cmie.com/",
+ "frequency": "M",
+ "has_yoy_toggle": false,
+ "date_modified": "2026-09-01",
+ "temporal_coverage": "2013-05-01/2026-09-01",
+ "page_url": "https://indiamacroindicators.co.in/economic-indicators/hsbc-services-purchasing-managers-index-pmi",
+ "scraped_at": "2026-10-08T18:38:50+00:00",
+ "qna": [
+  {
+   "question": "What does the Services Purchasing Manager Index (PMI) represent?",
+   "answer": "The Services Purchasing Managers Index (PMI) for India, available on a monthly basis, reflects the private sector activity in services.^The PMI data is based on a survey of businesses, derived from surveying senior executives in the private sector on a monthly frequency, and covers areas such as new orders, inventory levels, production, supplier deliveries, and employment."
+  },
+  {
+   "question": "What is the significance of Services Purchasing Managers Index (PMI)?",
+   "answer": "The services PMI provides real-time insight into the performance of the services sector, which is a significant component of the Indian economy.^As a leading indicator, the Services PMI provides advanced insight into the services sector, giving investors a better understanding of business conditions and valuable information about the economic backdrop of various markets.^This data is valuable for policymakers and business leaders to understand the market conditions and helps in formulating economic policies or business strategies."
+  },
+  {
+   "question": "How to interpret the Services Purchasing Managers Index (PMI) indicator?",
+   "answer": "The PMI is typically measured on a scale from 0 to 100. An index value above 50 indicates that the service sector is generally expanding. The higher the number (above 50), the stronger the expansion. Conversely, a value below 50 suggests a contraction in the service sector. The lower the number (below 50), the greater the degree of contraction.^A consistently high PMI can indicate robust services sector growth, while a low PMI may point to a downturn."
+  }
+ ],
+ "data": [
+  {
+   "unix_date": 1367366400,
+   "date": "2013-05-01",
+   "value": 53.6,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1370044800,
+   "date": "2013-06-01",
+   "value": 51.7,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1372636800,
+   "date": "2013-07-01",
+   "value": 47.9,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1375315200,
+   "date": "2013-08-01",
+   "value": 47.6,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1377993600,
+   "date": "2013-09-01",
+   "value": 44.6,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1380585600,
+   "date": "2013-10-01",
+   "value": 47.1,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1383264000,
+   "date": "2013-11-01",
+   "value": 47.2,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1385856000,
+   "date": "2013-12-01",
+   "value": 46.7,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1388534400,
+   "date": "2014-01-01",
+   "value": 48.3,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1391212800,
+   "date": "2014-02-01",
+   "value": 48.8,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1393632000,
+   "date": "2014-03-01",
+   "value": 47.5,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1396310400,
+   "date": "2014-04-01",
+   "value": 48.5,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1398902400,
+   "date": "2014-05-01",
+   "value": 50.2,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1401580800,
+   "date": "2014-06-01",
+   "value": 54.4,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1404172800,
+   "date": "2014-07-01",
+   "value": 52.2,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1406851200,
+   "date": "2014-08-01",
+   "value": 50.6,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1409529600,
+   "date": "2014-09-01",
+   "value": 51.6,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1412121600,
+   "date": "2014-10-01",
+   "value": 50,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1414800000,
+   "date": "2014-11-01",
+   "value": 52.6,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1417392000,
+   "date": "2014-12-01",
+   "value": 51.1,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1420070400,
+   "date": "2015-01-01",
+   "value": 52.4,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1422748800,
+   "date": "2015-02-01",
+   "value": 53.9,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1425168000,
+   "date": "2015-03-01",
+   "value": 53,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1427846400,
+   "date": "2015-04-01",
+   "value": 53.7,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1430438400,
+   "date": "2015-05-01",
+   "value": 51,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1433116800,
+   "date": "2015-06-01",
+   "value": 47.7,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1435708800,
+   "date": "2015-07-01",
+   "value": 50.8,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1438387200,
+   "date": "2015-08-01",
+   "value": 51.5,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1441065600,
+   "date": "2015-09-01",
+   "value": 51.3,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1443657600,
+   "date": "2015-10-01",
+   "value": 53.2,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1446336000,
+   "date": "2015-11-01",
+   "value": 50.1,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1448928000,
+   "date": "2015-12-01",
+   "value": 53.6,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1451606400,
+   "date": "2016-01-01",
+   "value": 54.3,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1454284800,
+   "date": "2016-02-01",
+   "value": 51.4,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1456790400,
+   "date": "2016-03-01",
+   "value": 54.3,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1459468800,
+   "date": "2016-04-01",
+   "value": 53.7,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1462060800,
+   "date": "2016-05-01",
+   "value": 51,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1464739200,
+   "date": "2016-06-01",
+   "value": 50.3,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1467331200,
+   "date": "2016-07-01",
+   "value": 51.9,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1470009600,
+   "date": "2016-08-01",
+   "value": 54.7,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1472688000,
+   "date": "2016-09-01",
+   "value": 52,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1475280000,
+   "date": "2016-10-01",
+   "value": 54.5,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1477958400,
+   "date": "2016-11-01",
+   "value": 46.7,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1480550400,
+   "date": "2016-12-01",
+   "value": 46.8,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1483228800,
+   "date": "2017-01-01",
+   "value": 48.7,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1485907200,
+   "date": "2017-02-01",
+   "value": 50.3,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1488326400,
+   "date": "2017-03-01",
+   "value": 51.5,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1491004800,
+   "date": "2017-04-01",
+   "value": 50.2,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1493596800,
+   "date": "2017-05-01",
+   "value": 52.2,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1496275200,
+   "date": "2017-06-01",
+   "value": 53.1,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1498867200,
+   "date": "2017-07-01",
+   "value": 45.9,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1501545600,
+   "date": "2017-08-01",
+   "value": 47.5,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1504224000,
+   "date": "2017-09-01",
+   "value": 50.7,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1506816000,
+   "date": "2017-10-01",
+   "value": 51.7,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1509494400,
+   "date": "2017-11-01",
+   "value": 48.5,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1512086400,
+   "date": "2017-12-01",
+   "value": 50.9,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1514764800,
+   "date": "2018-01-01",
+   "value": 51.7,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1517443200,
+   "date": "2018-02-01",
+   "value": 47.8,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1519862400,
+   "date": "2018-03-01",
+   "value": 50.3,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1522540800,
+   "date": "2018-04-01",
+   "value": 51.4,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1525132800,
+   "date": "2018-05-01",
+   "value": 49.6,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1527811200,
+   "date": "2018-06-01",
+   "value": 52.6,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1530403200,
+   "date": "2018-07-01",
+   "value": 54.2,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1533081600,
+   "date": "2018-08-01",
+   "value": 51.5,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1535760000,
+   "date": "2018-09-01",
+   "value": 50.9,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1538352000,
+   "date": "2018-10-01",
+   "value": 52.2,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1541030400,
+   "date": "2018-11-01",
+   "value": 53.7,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1543622400,
+   "date": "2018-12-01",
+   "value": 53.2,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1546300800,
+   "date": "2019-01-01",
+   "value": 52.2,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1548979200,
+   "date": "2019-02-01",
+   "value": 52.5,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1551398400,
+   "date": "2019-03-01",
+   "value": 52,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1554076800,
+   "date": "2019-04-01",
+   "value": 51,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1556668800,
+   "date": "2019-05-01",
+   "value": 50.2,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1559347200,
+   "date": "2019-06-01",
+   "value": 49.6,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1561939200,
+   "date": "2019-07-01",
+   "value": 53.8,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1564617600,
+   "date": "2019-08-01",
+   "value": 52.4,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1567296000,
+   "date": "2019-09-01",
+   "value": 48.7,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1569888000,
+   "date": "2019-10-01",
+   "value": 49.2,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1572566400,
+   "date": "2019-11-01",
+   "value": 52.7,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1575158400,
+   "date": "2019-12-01",
+   "value": 53.3,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1577836800,
+   "date": "2020-01-01",
+   "value": 55.5,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1580515200,
+   "date": "2020-02-01",
+   "value": 57.5,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1583020800,
+   "date": "2020-03-01",
+   "value": 49.3,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1585699200,
+   "date": "2020-04-01",
+   "value": 5.4,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1588291200,
+   "date": "2020-05-01",
+   "value": 12.6,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1590969600,
+   "date": "2020-06-01",
+   "value": 33.7,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1593561600,
+   "date": "2020-07-01",
+   "value": 34.2,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1596240000,
+   "date": "2020-08-01",
+   "value": 41.8,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1598918400,
+   "date": "2020-09-01",
+   "value": 49.8,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1601510400,
+   "date": "2020-10-01",
+   "value": 54.1,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1604188800,
+   "date": "2020-11-01",
+   "value": 53.7,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1606780800,
+   "date": "2020-12-01",
+   "value": 52.3,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1609459200,
+   "date": "2021-01-01",
+   "value": 52.8,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1612137600,
+   "date": "2021-02-01",
+   "value": 55.3,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1614556800,
+   "date": "2021-03-01",
+   "value": 54.6,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1617235200,
+   "date": "2021-04-01",
+   "value": 54,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1619827200,
+   "date": "2021-05-01",
+   "value": 46.4,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1622505600,
+   "date": "2021-06-01",
+   "value": 41.2,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1625097600,
+   "date": "2021-07-01",
+   "value": 45.4,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1627776000,
+   "date": "2021-08-01",
+   "value": 56.7,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1630454400,
+   "date": "2021-09-01",
+   "value": 55.2,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1633046400,
+   "date": "2021-10-01",
+   "value": 58.4,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1635724800,
+   "date": "2021-11-01",
+   "value": 58.1,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1638316800,
+   "date": "2021-12-01",
+   "value": 55.5,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1640995200,
+   "date": "2022-01-01",
+   "value": 51.5,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1643673600,
+   "date": "2022-02-01",
+   "value": 51.8,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1646092800,
+   "date": "2022-03-01",
+   "value": 53.6,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1648771200,
+   "date": "2022-04-01",
+   "value": 57.9,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1651363200,
+   "date": "2022-05-01",
+   "value": 58.9,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1654041600,
+   "date": "2022-06-01",
+   "value": 59.2,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1656633600,
+   "date": "2022-07-01",
+   "value": 55.5,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1659312000,
+   "date": "2022-08-01",
+   "value": 57.2,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1661990400,
+   "date": "2022-09-01",
+   "value": 54.3,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1664582400,
+   "date": "2022-10-01",
+   "value": 55.1,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1667260800,
+   "date": "2022-11-01",
+   "value": 56.4,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1669852800,
+   "date": "2022-12-01",
+   "value": 58.5,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1672531200,
+   "date": "2023-01-01",
+   "value": 57.2,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1675209600,
+   "date": "2023-02-01",
+   "value": 59.4,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1677628800,
+   "date": "2023-03-01",
+   "value": 57.8,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1680307200,
+   "date": "2023-04-01",
+   "value": 62,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1682899200,
+   "date": "2023-05-01",
+   "value": 61.2,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1685577600,
+   "date": "2023-06-01",
+   "value": 58.5,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1688169600,
+   "date": "2023-07-01",
+   "value": 62.3,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1690848000,
+   "date": "2023-08-01",
+   "value": 60.1,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1693526400,
+   "date": "2023-09-01",
+   "value": 61,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1696118400,
+   "date": "2023-10-01",
+   "value": 58.4,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1698796800,
+   "date": "2023-11-01",
+   "value": 56.9,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1701388800,
+   "date": "2023-12-01",
+   "value": 59,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1704067200,
+   "date": "2024-01-01",
+   "value": 61.8,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1706745600,
+   "date": "2024-02-01",
+   "value": 60.6,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1709251200,
+   "date": "2024-03-01",
+   "value": 61.2,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1711929600,
+   "date": "2024-04-01",
+   "value": 60.8,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1714521600,
+   "date": "2024-05-01",
+   "value": 60.2,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1717200000,
+   "date": "2024-06-01",
+   "value": 60.5,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1719792000,
+   "date": "2024-07-01",
+   "value": 60.3,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1722470400,
+   "date": "2024-08-01",
+   "value": 60.9,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1725148800,
+   "date": "2024-09-01",
+   "value": 57.7,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1727740800,
+   "date": "2024-10-01",
+   "value": 58.5,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1730419200,
+   "date": "2024-11-01",
+   "value": 58.4,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1733011200,
+   "date": "2024-12-01",
+   "value": 59.3,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1735689600,
+   "date": "2025-01-01",
+   "value": 56.5,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1738368000,
+   "date": "2025-02-01",
+   "value": 59,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1740787200,
+   "date": "2025-03-01",
+   "value": 58.5,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1743465600,
+   "date": "2025-04-01",
+   "value": 58.7,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1746057600,
+   "date": "2025-05-01",
+   "value": 58.8,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1748736000,
+   "date": "2025-06-01",
+   "value": 60.4,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1751328000,
+   "date": "2025-07-01",
+   "value": 60.5,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1754006400,
+   "date": "2025-08-01",
+   "value": 62.9,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1756684800,
+   "date": "2025-09-01",
+   "value": 60.9,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1759276800,
+   "date": "2025-10-01",
+   "value": 58.9,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1761955200,
+   "date": "2025-11-01",
+   "value": 59.8,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1764547200,
+   "date": "2025-12-01",
+   "value": 58,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1767225600,
+   "date": "2026-01-01",
+   "value": 58.5,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1769904000,
+   "date": "2026-02-01",
+   "value": 58.1,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1772323200,
+   "date": "2026-03-01",
+   "value": 57.5,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1775001600,
+   "date": "2026-04-01",
+   "value": 58.8,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1777593600,
+   "date": "2026-05-01",
+   "value": 59.8,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1780272000,
+   "date": "2026-06-01",
+   "value": 57.4,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1782864000,
+   "date": "2026-07-01",
+   "value": 53.3,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1785542400,
+   "date": "2026-08-01",
+   "value": 54.1,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1788220800,
+   "date": "2026-09-01",
+   "value": 55.2,
+   "units": "Index",
+   "yoy": null,
+   "yoy_units": null
+  }
+ ]
+}

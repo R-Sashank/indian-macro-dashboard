@@ -1,0 +1,433 @@
+{
+ "slug": "services-business-confidence",
+ "category": "Services Sector Activity",
+ "title": "Services Business Confidence",
+ "description": "India's services business confidence index stands at 60.10% for Sep 2026. This is a forward looking measure that often moves ahead of actual output.",
+ "headline": {
+  "Absolute": "India's services business confidence index stands at 60.10% for Sep 2026. This is a forward looking measure that often moves ahead of actual output."
+ },
+ "source": "CMIE Economic Outlook, 1 Finance Research",
+ "source_url": "https://economicoutlook.cmie.com/",
+ "frequency": "Q",
+ "has_yoy_toggle": false,
+ "date_modified": "2026-09-30",
+ "temporal_coverage": "2014-06-30/2026-09-30",
+ "page_url": "https://indiamacroindicators.co.in/economic-indicators/services-business-confidence",
+ "scraped_at": "2026-10-08T18:38:51+00:00",
+ "qna": [
+  {
+   "question": "What does Assessment and Expectation for Overall Business Situation (Services) data represent?",
+   "answer": "This is a survey based data, comprising assessments and forecasts made by businesses within the services sector regarding their current and future business situation. It reflects the confidence and outlook of service providers.^The survey includes responses from various firms in the services sector. The RBI periodically collects data from these firms regarding their current and expected future business situations.^The data typically includes survey responses on various aspects such as revenue expectations, hiring plans, investment plans, and perceptions of market conditions."
+  },
+  {
+   "question": "What is the significance of Assessment and Expectation for Overall Business Situation (Services) data?",
+   "answer": "The data is a primary indicator of the future prospects of the services sector and offers insights into broader economic trends, including consumer demand, business investment, and employment.^The data can provide valuable feedback on the effectiveness of economic and sector-specific policies. It also reflects the impact of broader market conditions on the services sector.^Helpful for the investors and analysts to make informed decisions about investments in different sectors."
+  },
+  {
+   "question": "How to interpret the Assessment and Expectation for Overall Business Situation (Services) data?",
+   "answer": "The net response is calculated by subtracting the percentage of negative responses ('worse'/'decrease') from the percentage of positive responses ('better'/'increase'). The resulting figure, which ranges from -100 to +100, indicates the overall sentiment. A positive net response signifies optimism (expansion), while a negative response indicates pessimism (contraction).^Analysing this data helps in understanding the overall economic outlook and the level of confidence among service sector businesses."
+  }
+ ],
+ "data": [
+  {
+   "unix_date": 1404086400,
+   "date": "2014-06-30",
+   "value": 66.6,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1412035200,
+   "date": "2014-09-30",
+   "value": 66.6,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1419984000,
+   "date": "2014-12-31",
+   "value": 65.3,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1427760000,
+   "date": "2015-03-31",
+   "value": 57.7,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1435622400,
+   "date": "2015-06-30",
+   "value": 48.9,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1443571200,
+   "date": "2015-09-30",
+   "value": 49,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1451520000,
+   "date": "2015-12-31",
+   "value": 45.3,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1459382400,
+   "date": "2016-03-31",
+   "value": 43.3,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1467244800,
+   "date": "2016-06-30",
+   "value": 49.3,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1475193600,
+   "date": "2016-09-30",
+   "value": 51.4,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1483142400,
+   "date": "2016-12-31",
+   "value": 52.3,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1490918400,
+   "date": "2017-03-31",
+   "value": 53.1,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1498780800,
+   "date": "2017-06-30",
+   "value": 54.8,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1506729600,
+   "date": "2017-09-30",
+   "value": 46.4,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1514678400,
+   "date": "2017-12-31",
+   "value": 46.3,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1522454400,
+   "date": "2018-03-31",
+   "value": 47.26,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1530316800,
+   "date": "2018-06-30",
+   "value": 48.94,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1538265600,
+   "date": "2018-09-30",
+   "value": 50.73,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1546214400,
+   "date": "2018-12-31",
+   "value": 46.5,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1553990400,
+   "date": "2019-03-31",
+   "value": 47.74,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1561852800,
+   "date": "2019-06-30",
+   "value": 44.75,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1569801600,
+   "date": "2019-09-30",
+   "value": 44.14,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1577750400,
+   "date": "2019-12-31",
+   "value": 33.1,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1585612800,
+   "date": "2020-03-31",
+   "value": 35.53,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1593475200,
+   "date": "2020-06-30",
+   "value": 33.44,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1601424000,
+   "date": "2020-09-30",
+   "value": 26.98,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1609372800,
+   "date": "2020-12-31",
+   "value": 44.47,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1617148800,
+   "date": "2021-03-31",
+   "value": 44.47,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1625011200,
+   "date": "2021-06-30",
+   "value": 50.1,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1632960000,
+   "date": "2021-09-30",
+   "value": 45,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1640908800,
+   "date": "2021-12-31",
+   "value": 72.9,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1648684800,
+   "date": "2022-03-31",
+   "value": 64.8,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1656547200,
+   "date": "2022-06-30",
+   "value": 53.4,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1664496000,
+   "date": "2022-09-30",
+   "value": 55.9,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1672444800,
+   "date": "2022-12-31",
+   "value": 53,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1680220800,
+   "date": "2023-03-31",
+   "value": 50.1,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1688083200,
+   "date": "2023-06-30",
+   "value": 55.8,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1696032000,
+   "date": "2023-09-30",
+   "value": 56,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1703980800,
+   "date": "2023-12-31",
+   "value": 43.1,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1711843200,
+   "date": "2024-03-31",
+   "value": 54.8,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1719705600,
+   "date": "2024-06-30",
+   "value": 65.3,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1727654400,
+   "date": "2024-09-30",
+   "value": 69.4,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1735603200,
+   "date": "2024-12-31",
+   "value": 68,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1743379200,
+   "date": "2025-03-31",
+   "value": 69.2,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1751241600,
+   "date": "2025-06-30",
+   "value": 69.6,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1759190400,
+   "date": "2025-09-30",
+   "value": 58.7,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1767139200,
+   "date": "2025-12-31",
+   "value": 73.2,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1774915200,
+   "date": "2026-03-31",
+   "value": 70.2,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1782777600,
+   "date": "2026-06-30",
+   "value": 64.2,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1790726400,
+   "date": "2026-09-30",
+   "value": 60.1,
+   "units": "Per cent",
+   "yoy": null,
+   "yoy_units": null
+  }
+ ]
+}

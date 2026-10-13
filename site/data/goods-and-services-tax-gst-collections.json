@@ -1,0 +1,922 @@
+{
+ "slug": "goods-and-services-tax-gst-collections",
+ "category": "Services Sector Activity",
+ "title": "GST Collections",
+ "description": "India's GST collections stand at ₹ 2,035.2 Billion for Sep 2026. This is one of the most current monthly proxies for nominal consumption nationwide.",
+ "headline": {
+  "Absolute": "India's GST collections stand at ₹ 2,035.2 Billion for Sep 2026. This is one of the most current monthly proxies for nominal consumption nationwide.",
+  "Y-o-Y": "India's GST collections stand at 7.67% for Sep 2026. This is one of the most current monthly proxies for nominal consumption nationwide."
+ },
+ "source": "CMIE Economic Outlook, 1 Finance Research",
+ "source_url": "https://economicoutlook.cmie.com/",
+ "frequency": "M",
+ "has_yoy_toggle": true,
+ "date_modified": "2026-09-01",
+ "temporal_coverage": "2017-07-01/2026-09-01",
+ "page_url": "https://indiamacroindicators.co.in/economic-indicators/goods-and-services-tax-gst-collections",
+ "scraped_at": "2026-10-08T18:38:48+00:00",
+ "qna": [
+  {
+   "question": "What does the Goods and Services Tax (GST) Collections data represent?",
+   "answer": "The Goods and Services Tax (GST) is a unified tax system that replaced multiple indirect taxes levied by both the Central and State Governments. Under GST, both the Central and State Governments share the authority to levy and collect taxes on goods and services.^GST Collections data represents the total indirect tax collected on goods and services over a specific period. It is a comprehensive, multi-stage, destination-based tax imposed on every value addition.^It includes revenues from various GST components such as Central GST (CGST), State GST (SGST), Integrated GST (IGST), and cesses."
+  },
+  {
+   "question": "What is the significance of the Goods and Services Tax (GST) Collections data?",
+   "answer": "This metric is a crucial indicator of the overall volume of taxable economic activities, reflecting the health of the consumer market, business transactions, and the effectiveness of tax administration.^It provides insights into consumer spending as it is levied on the sale of goods and services, business activities as GST is applicable to various stages of the supply chain, and the effectiveness of tax policies and administrative efficiency.^This data is essential for government bodies, policymakers, economists, and businesses for understanding economic trends, planning budgets, and formulating economic strategies.^GST collections are a major source of revenue for the government, impacting its fiscal health and capacity to fund public services and infrastructure.^The level of GST collections can have implications for inflation, as it reflects the pricing dynamics and consumption patterns in the economy."
+  },
+  {
+   "question": "How to interpret the Goods and Services Tax (GST) Collections data?",
+   "answer": "Trends in GST collections can be used to understand broader economic patterns, including consumer behaviour and business cycles, and also the performance of both manufacturing and services sectors.^High GST collections typically suggest robust economic activity, as they imply greater consumption and business transactions. Conversely, low collections can indicate an economic slowdown.^Comparing actual GST collections with the budgeted numbers helps assess the accuracy of government forecasts and the effectiveness of economic policies. A significant deviation might indicate economic volatility or misestimation."
+  }
+ ],
+ "data": [
+  {
+   "unix_date": 1498867200,
+   "date": "2017-07-01",
+   "value": 215.7,
+   "units": "Rs. Billion",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1501545600,
+   "date": "2017-08-01",
+   "value": 956.3,
+   "units": "Rs. Billion",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1504224000,
+   "date": "2017-09-01",
+   "value": 940.6,
+   "units": "Rs. Billion",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1506816000,
+   "date": "2017-10-01",
+   "value": 933.3,
+   "units": "Rs. Billion",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1509494400,
+   "date": "2017-11-01",
+   "value": 837.8,
+   "units": "Rs. Billion",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1512086400,
+   "date": "2017-12-01",
+   "value": 843.1,
+   "units": "Rs. Billion",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1514764800,
+   "date": "2018-01-01",
+   "value": 898.3,
+   "units": "Rs. Billion",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1517443200,
+   "date": "2018-02-01",
+   "value": 859.6,
+   "units": "Rs. Billion",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1519862400,
+   "date": "2018-03-01",
+   "value": 921.7,
+   "units": "Rs. Billion",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1522540800,
+   "date": "2018-04-01",
+   "value": 1034.6,
+   "units": "Rs. Billion",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1525132800,
+   "date": "2018-05-01",
+   "value": 940.2,
+   "units": "Rs. Billion",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1527811200,
+   "date": "2018-06-01",
+   "value": 956.1,
+   "units": "Rs. Billion",
+   "yoy": null,
+   "yoy_units": null
+  },
+  {
+   "unix_date": 1530403200,
+   "date": "2018-07-01",
+   "value": 964.8,
+   "units": "Rs. Billion",
+   "yoy": 347.26,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1533081600,
+   "date": "2018-08-01",
+   "value": 939.6,
+   "units": "Rs. Billion",
+   "yoy": -1.75,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1535760000,
+   "date": "2018-09-01",
+   "value": 944.4,
+   "units": "Rs. Billion",
+   "yoy": 0.4,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1538352000,
+   "date": "2018-10-01",
+   "value": 1007.1,
+   "units": "Rs. Billion",
+   "yoy": 7.9,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1541030400,
+   "date": "2018-11-01",
+   "value": 976.4,
+   "units": "Rs. Billion",
+   "yoy": 16.54,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1543622400,
+   "date": "2018-12-01",
+   "value": 947.3,
+   "units": "Rs. Billion",
+   "yoy": 12.35,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1546300800,
+   "date": "2019-01-01",
+   "value": 1025,
+   "units": "Rs. Billion",
+   "yoy": 14.11,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1548979200,
+   "date": "2019-02-01",
+   "value": 972.5,
+   "units": "Rs. Billion",
+   "yoy": 13.13,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1551398400,
+   "date": "2019-03-01",
+   "value": 1065.8,
+   "units": "Rs. Billion",
+   "yoy": 15.63,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1554076800,
+   "date": "2019-04-01",
+   "value": 1138.7,
+   "units": "Rs. Billion",
+   "yoy": 10.06,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1556668800,
+   "date": "2019-05-01",
+   "value": 1002.9,
+   "units": "Rs. Billion",
+   "yoy": 6.67,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1559347200,
+   "date": "2019-06-01",
+   "value": 999.4,
+   "units": "Rs. Billion",
+   "yoy": 4.53,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1561939200,
+   "date": "2019-07-01",
+   "value": 1020.8,
+   "units": "Rs. Billion",
+   "yoy": 5.8,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1564617600,
+   "date": "2019-08-01",
+   "value": 982,
+   "units": "Rs. Billion",
+   "yoy": 4.52,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1567296000,
+   "date": "2019-09-01",
+   "value": 919.2,
+   "units": "Rs. Billion",
+   "yoy": -2.67,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1569888000,
+   "date": "2019-10-01",
+   "value": 953.8,
+   "units": "Rs. Billion",
+   "yoy": -5.29,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1572566400,
+   "date": "2019-11-01",
+   "value": 1034.9,
+   "units": "Rs. Billion",
+   "yoy": 6,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1575158400,
+   "date": "2019-12-01",
+   "value": 1031.8,
+   "units": "Rs. Billion",
+   "yoy": 8.93,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1577836800,
+   "date": "2020-01-01",
+   "value": 1108.2,
+   "units": "Rs. Billion",
+   "yoy": 8.11,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1580515200,
+   "date": "2020-02-01",
+   "value": 1053.7,
+   "units": "Rs. Billion",
+   "yoy": 8.35,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1583020800,
+   "date": "2020-03-01",
+   "value": 976,
+   "units": "Rs. Billion",
+   "yoy": -8.43,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1585699200,
+   "date": "2020-04-01",
+   "value": 322.9,
+   "units": "Rs. Billion",
+   "yoy": -71.64,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1588291200,
+   "date": "2020-05-01",
+   "value": 620.1,
+   "units": "Rs. Billion",
+   "yoy": -38.17,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1590969600,
+   "date": "2020-06-01",
+   "value": 909.2,
+   "units": "Rs. Billion",
+   "yoy": -9.03,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1593561600,
+   "date": "2020-07-01",
+   "value": 874.2,
+   "units": "Rs. Billion",
+   "yoy": -14.36,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1596240000,
+   "date": "2020-08-01",
+   "value": 864.5,
+   "units": "Rs. Billion",
+   "yoy": -11.97,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1598918400,
+   "date": "2020-09-01",
+   "value": 954.8,
+   "units": "Rs. Billion",
+   "yoy": 3.88,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1601510400,
+   "date": "2020-10-01",
+   "value": 1051.5,
+   "units": "Rs. Billion",
+   "yoy": 10.25,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1604188800,
+   "date": "2020-11-01",
+   "value": 1049.6,
+   "units": "Rs. Billion",
+   "yoy": 1.42,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1606780800,
+   "date": "2020-12-01",
+   "value": 1151.7,
+   "units": "Rs. Billion",
+   "yoy": 11.62,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1609459200,
+   "date": "2021-01-01",
+   "value": 1198.5,
+   "units": "Rs. Billion",
+   "yoy": 8.15,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1612137600,
+   "date": "2021-02-01",
+   "value": 1131.4,
+   "units": "Rs. Billion",
+   "yoy": 7.38,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1614556800,
+   "date": "2021-03-01",
+   "value": 1239,
+   "units": "Rs. Billion",
+   "yoy": 26.95,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1617235200,
+   "date": "2021-04-01",
+   "value": 1413.8,
+   "units": "Rs. Billion",
+   "yoy": 337.8,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1619827200,
+   "date": "2021-05-01",
+   "value": 1027.1,
+   "units": "Rs. Billion",
+   "yoy": 65.64,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1622505600,
+   "date": "2021-06-01",
+   "value": 928.5,
+   "units": "Rs. Billion",
+   "yoy": 2.13,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1625097600,
+   "date": "2021-07-01",
+   "value": 1163.9,
+   "units": "Rs. Billion",
+   "yoy": 33.14,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1627776000,
+   "date": "2021-08-01",
+   "value": 1120.2,
+   "units": "Rs. Billion",
+   "yoy": 29.58,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1630454400,
+   "date": "2021-09-01",
+   "value": 1170.1,
+   "units": "Rs. Billion",
+   "yoy": 22.55,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1633046400,
+   "date": "2021-10-01",
+   "value": 1301.3,
+   "units": "Rs. Billion",
+   "yoy": 23.75,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1635724800,
+   "date": "2021-11-01",
+   "value": 1315.3,
+   "units": "Rs. Billion",
+   "yoy": 25.31,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1638316800,
+   "date": "2021-12-01",
+   "value": 1297.8,
+   "units": "Rs. Billion",
+   "yoy": 12.68,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1640995200,
+   "date": "2022-01-01",
+   "value": 1383.9,
+   "units": "Rs. Billion",
+   "yoy": 15.48,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1643673600,
+   "date": "2022-02-01",
+   "value": 1330.3,
+   "units": "Rs. Billion",
+   "yoy": 17.57,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1646092800,
+   "date": "2022-03-01",
+   "value": 1421,
+   "units": "Rs. Billion",
+   "yoy": 14.68,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1648771200,
+   "date": "2022-04-01",
+   "value": 1675.4,
+   "units": "Rs. Billion",
+   "yoy": 18.5,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1651363200,
+   "date": "2022-05-01",
+   "value": 1408.8,
+   "units": "Rs. Billion",
+   "yoy": 37.17,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1654041600,
+   "date": "2022-06-01",
+   "value": 1446.2,
+   "units": "Rs. Billion",
+   "yoy": 55.75,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1656633600,
+   "date": "2022-07-01",
+   "value": 1490,
+   "units": "Rs. Billion",
+   "yoy": 28.01,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1659312000,
+   "date": "2022-08-01",
+   "value": 1436.1,
+   "units": "Rs. Billion",
+   "yoy": 28.2,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1661990400,
+   "date": "2022-09-01",
+   "value": 1476.9,
+   "units": "Rs. Billion",
+   "yoy": 26.22,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1664582400,
+   "date": "2022-10-01",
+   "value": 1517.2,
+   "units": "Rs. Billion",
+   "yoy": 16.59,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1667260800,
+   "date": "2022-11-01",
+   "value": 1458.7,
+   "units": "Rs. Billion",
+   "yoy": 10.9,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1669852800,
+   "date": "2022-12-01",
+   "value": 1495.1,
+   "units": "Rs. Billion",
+   "yoy": 15.2,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1672531200,
+   "date": "2023-01-01",
+   "value": 1559.2,
+   "units": "Rs. Billion",
+   "yoy": 12.67,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1675209600,
+   "date": "2023-02-01",
+   "value": 1495.8,
+   "units": "Rs. Billion",
+   "yoy": 12.44,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1677628800,
+   "date": "2023-03-01",
+   "value": 1601.2,
+   "units": "Rs. Billion",
+   "yoy": 12.69,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1680307200,
+   "date": "2023-04-01",
+   "value": 1870.3,
+   "units": "Rs. Billion",
+   "yoy": 11.64,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1682899200,
+   "date": "2023-05-01",
+   "value": 1570.9,
+   "units": "Rs. Billion",
+   "yoy": 11.5,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1685577600,
+   "date": "2023-06-01",
+   "value": 1615,
+   "units": "Rs. Billion",
+   "yoy": 11.67,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1688169600,
+   "date": "2023-07-01",
+   "value": 1651,
+   "units": "Rs. Billion",
+   "yoy": 10.81,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1690848000,
+   "date": "2023-08-01",
+   "value": 1590.7,
+   "units": "Rs. Billion",
+   "yoy": 10.76,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1693526400,
+   "date": "2023-09-01",
+   "value": 1627.1,
+   "units": "Rs. Billion",
+   "yoy": 10.17,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1696118400,
+   "date": "2023-10-01",
+   "value": 1720,
+   "units": "Rs. Billion",
+   "yoy": 13.37,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1698796800,
+   "date": "2023-11-01",
+   "value": 1679.3,
+   "units": "Rs. Billion",
+   "yoy": 15.12,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1701388800,
+   "date": "2023-12-01",
+   "value": 1648.8,
+   "units": "Rs. Billion",
+   "yoy": 10.28,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1704067200,
+   "date": "2024-01-01",
+   "value": 1741.1,
+   "units": "Rs. Billion",
+   "yoy": 11.66,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1706745600,
+   "date": "2024-02-01",
+   "value": 1683.4,
+   "units": "Rs. Billion",
+   "yoy": 12.54,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1709251200,
+   "date": "2024-03-01",
+   "value": 1784.8,
+   "units": "Rs. Billion",
+   "yoy": 11.47,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1711929600,
+   "date": "2024-04-01",
+   "value": 2102.7,
+   "units": "Rs. Billion",
+   "yoy": 12.42,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1714521600,
+   "date": "2024-05-01",
+   "value": 1727.4,
+   "units": "Rs. Billion",
+   "yoy": 9.96,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1717200000,
+   "date": "2024-06-01",
+   "value": 1738.1,
+   "units": "Rs. Billion",
+   "yoy": 7.63,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1719792000,
+   "date": "2024-07-01",
+   "value": 1820.8,
+   "units": "Rs. Billion",
+   "yoy": 10.28,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1722470400,
+   "date": "2024-08-01",
+   "value": 1749.6,
+   "units": "Rs. Billion",
+   "yoy": 9.99,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1725148800,
+   "date": "2024-09-01",
+   "value": 1732.4,
+   "units": "Rs. Billion",
+   "yoy": 6.47,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1727740800,
+   "date": "2024-10-01",
+   "value": 1873.5,
+   "units": "Rs. Billion",
+   "yoy": 8.92,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1730419200,
+   "date": "2024-11-01",
+   "value": 1822.7,
+   "units": "Rs. Billion",
+   "yoy": 8.54,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1733011200,
+   "date": "2024-12-01",
+   "value": 1768.6,
+   "units": "Rs. Billion",
+   "yoy": 7.26,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1735689600,
+   "date": "2025-01-01",
+   "value": 1955.1,
+   "units": "Rs. Billion",
+   "yoy": 12.29,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1738368000,
+   "date": "2025-02-01",
+   "value": 1836.5,
+   "units": "Rs. Billion",
+   "yoy": 9.09,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1740787200,
+   "date": "2025-03-01",
+   "value": 1961.4,
+   "units": "Rs. Billion",
+   "yoy": 9.89,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1743465600,
+   "date": "2025-04-01",
+   "value": 2367.2,
+   "units": "Rs. Billion",
+   "yoy": 12.58,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1746057600,
+   "date": "2025-05-01",
+   "value": 2010.5,
+   "units": "Rs. Billion",
+   "yoy": 16.39,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1748736000,
+   "date": "2025-06-01",
+   "value": 1846,
+   "units": "Rs. Billion",
+   "yoy": 6.2,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1751328000,
+   "date": "2025-07-01",
+   "value": 1957.3,
+   "units": "Rs. Billion",
+   "yoy": 7.5,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1754006400,
+   "date": "2025-08-01",
+   "value": 1863.2,
+   "units": "Rs. Billion",
+   "yoy": 6.49,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1756684800,
+   "date": "2025-09-01",
+   "value": 1890.2,
+   "units": "Rs. Billion",
+   "yoy": 9.11,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1759276800,
+   "date": "2025-10-01",
+   "value": 1959.4,
+   "units": "Rs. Billion",
+   "yoy": 4.59,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1761955200,
+   "date": "2025-11-01",
+   "value": 1750.3,
+   "units": "Rs. Billion",
+   "yoy": -3.97,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1764547200,
+   "date": "2025-12-01",
+   "value": 1791,
+   "units": "Rs. Billion",
+   "yoy": 1.27,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1767225600,
+   "date": "2026-01-01",
+   "value": 1993.2,
+   "units": "Rs. Billion",
+   "yoy": 1.95,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1769904000,
+   "date": "2026-02-01",
+   "value": 1888.3,
+   "units": "Rs. Billion",
+   "yoy": 2.82,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1772323200,
+   "date": "2026-03-01",
+   "value": 2001.7,
+   "units": "Rs. Billion",
+   "yoy": 2.05,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1775001600,
+   "date": "2026-04-01",
+   "value": 2427,
+   "units": "Rs. Billion",
+   "yoy": 2.53,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1777593600,
+   "date": "2026-05-01",
+   "value": 1941.8,
+   "units": "Rs. Billion",
+   "yoy": -3.42,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1780272000,
+   "date": "2026-06-01",
+   "value": 1948.1,
+   "units": "Rs. Billion",
+   "yoy": 5.53,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1782864000,
+   "date": "2026-07-01",
+   "value": 2112.1,
+   "units": "Rs. Billion",
+   "yoy": 7.9,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1785542400,
+   "date": "2026-08-01",
+   "value": 1998.5,
+   "units": "Rs. Billion",
+   "yoy": 7.27,
+   "yoy_units": "Per cent"
+  },
+  {
+   "unix_date": 1788220800,
+   "date": "2026-09-01",
+   "value": 2035.2,
+   "units": "Rs. Billion",
+   "yoy": 7.67,
+   "yoy_units": "Per cent"
+  }
+ ]
+}

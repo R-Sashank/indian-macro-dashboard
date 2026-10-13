@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indian Macro Dashboard</title>
+<meta name="description" content="India's high-frequency economic indicators with full history, charts and Excel/CSV downloads.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b6e6e'/%3E%3Cpath d='M5 22l7-8 5 4 10-12' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="#/">
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7"/><path d="M5 22l7-8 5 4 10-12" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Indian Macro Dashboard</span>
+    </a>
+    <div class="searchbox">
+      <input id="q" type="search" placeholder="Search indicators (e.g. GST, repo, Nifty)…" autocomplete="off" aria-label="Search indicators">
+      <div id="qres" class="qres" hidden></div>
+    </div>
+    <button class="iconbtn" id="theme" title="Toggle light / dark" aria-label="Toggle light or dark theme">◐</button>
+  </div>
+</header>
+
+<main id="app" class="wrap" aria-live="polite"></main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>Source:</strong> CMIE Economic Outlook, 1 Finance Research. Data mirrored from
+      <a href="https://indiamacroindicators.co.in" target="_blank" rel="noopener">indiamacroindicators.co.in</a>
+      for personal research use, with Excel and CSV downloads added. Underlying figures remain the property of the
+      original providers; check each indicator's credit line.</p>
+    <p id="foot-meta" class="muted"></p>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
