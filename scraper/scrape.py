@@ -42,24 +42,6 @@ HEADERS = {
     "Accept": "text/html,application/xhtml+xml",
 }
 
-# Category order as the site's own navigation lists them.
-CATEGORY_SLUGS = [
-    "services-sector-activity",
-    "industrial-sector-performance",
-    "agriculture-output",
-    "consumer-inflation",
-    "equity-market-optimism",
-    "financial-sector-soundness",
-    "global-economic-impact",
-    "interest-rate-outlook",
-    "other-hfis",
-    "key-economic-indicators",
-]
-
-# Key-indicator pages reachable only via "related" links. The site links to
-# government-capital-expenditure-yoy-growth but that URL returns a 404, so it
-# is not mirrored; add slugs here if the source ever publishes more.
-EXTRA_KEY_PAGES: dict = {}
 
 # Hand-written series names for the key-indicator pages (payload keys are
 # misleading, e.g. the mutual-fund page's `equity` key holds total net AUM).
@@ -177,62 +159,51 @@ def pretty_name(key: str) -> str:
 
 # --------------------------------------------------------------- discovery
 
-def discover() -> dict:
-    """Categories, ordered indicator lists, and per-slug basics."""
-    # graph type / frequency live in the Q&A records on the index page
-    idx_html = fetch(f"{BASE}/economic-indicators")
-    idx_payload = decode_rsc_payload(idx_html)
-    rec_rx = re.compile(
-        r'"sub_topic":"([^"]*)".*?"slug":"([^"]*)".*?"frequency":"([^"]*)".*?"graph":"([^"]*)"'
-    )
-    meta = {}
-    for m in rec_rx.finditer(idx_payload):
-        meta.setdefault(m.group(2), {"graph": m.group(4), "frequency": m.group(3)})
+MIN_INDICATORS = 100  # sanity floor; the source lists about 130
 
-    categories, indicators = [], {}
-    for cslug in CATEGORY_SLUGS:
-        html = fetch(f"{BASE}/economic-indicators/category/{cslug}")
-        name = cslug
-        for n in ld_nodes(html):
-            if n.get("@type") in ("CollectionPage", "WebPage") and n.get("name"):
-                name = n["name"].split("|")[0].strip()
-                break
-        md = META_DESC_RE.search(html)
-        order = []
-        for n in ld_nodes(html):
-            if n.get("@type") != "ItemList":
-                continue
-            for it in n.get("itemListElement", []):
-                url = it.get("url") or ""
-                slug = url.rsplit("/", 1)[-1]
-                path = "key-economic-indicators" if "/key-economic-indicators/" in url else "economic-indicators"
-                ind = indicators.setdefault(
-                    slug, {"slug": slug, "name": it.get("name"), "path": path, "categories": []}
-                )
-                if cslug not in ind["categories"]:
-                    ind["categories"].append(cslug)
-                order.append(slug)
-        if cslug == "key-economic-indicators":
-            for slug, nm in EXTRA_KEY_PAGES.items():
-                ind = indicators.setdefault(
-                    slug, {"slug": slug, "name": nm, "path": "key-economic-indicators", "categories": []}
-                )
-                if cslug not in ind["categories"]:
-                    ind["categories"].append(cslug)
-                order.append(slug)
-        categories.append(
-            {
-                "slug": cslug,
-                "name": name,
-                "description": (md.group(1) if md else "").replace("&#x27;", "'").replace("&amp;", "&"),
-                "indicators": list(dict.fromkeys(order)),
-            }
+
+def discover() -> dict:
+    """Categories and ordered indicator lists, from the hub page's own data list.
+
+    The hub page embeds one list of every indicator tagged with its category.
+    This raises if that list is missing or implausibly small, so a redesign on
+    the source fails the run loudly instead of publishing an empty site.
+    """
+    payload = decode_rsc_payload(fetch(f"{BASE}/economic-indicators"))
+    rows = json_after(payload, "data")
+    shaped = isinstance(rows, list) and all(
+        isinstance(r, dict) and "slug" in r and "category_slug" in r for r in rows
+    )
+    if not shaped or len(rows) < MIN_INDICATORS:
+        found = len(rows) if isinstance(rows, list) else "no list"
+        raise RuntimeError(
+            f"hub page no longer lists indicators as expected ({found} found, need >= {MIN_INDICATORS}); "
+            "the source site probably changed its layout"
         )
-    for slug, ind in indicators.items():
-        ind.update(meta.get(slug, {}))
-        ind.setdefault("graph", "line")
-        ind.setdefault("frequency", None)
-    return {"categories": categories, "indicators": indicators}
+    categories, indicators = {}, {}
+    for r in rows:
+        cslug = r["category_slug"]
+        cat = categories.setdefault(
+            cslug, {"slug": cslug, "name": r.get("category") or cslug, "description": "", "indicators": []}
+        )
+        slug = r["slug"]
+        if slug in indicators:
+            continue
+        is_key = "key-economic" in str(r.get("indicator_id", ""))
+        indicators[slug] = {
+            "slug": slug, "name": r.get("sub_topic") or slug,
+            "path": "key-economic-indicators" if is_key else "economic-indicators",
+            "categories": [cslug], "graph": "line", "frequency": None,
+        }
+        cat["indicators"].append(slug)
+    for cat in categories.values():
+        try:
+            md = META_DESC_RE.search(fetch(f"{BASE}/economic-indicators/category/{cat['slug']}"))
+            if md:
+                cat["description"] = md.group(1).replace("&#x27;", "'").replace("&amp;", "&")
+        except RuntimeError:
+            pass  # description is cosmetic
+    return {"categories": list(categories.values()), "indicators": indicators}
 
 
 # ----------------------------------------------------------- page scraping
@@ -342,9 +313,11 @@ def scrape_standard(slug: str, path: str) -> dict:
     else:
         views = [{"id": "v0", "label": None, "series": [make_series("value", "Value", data)]}]
 
+    qa = obj.get("ques_and_ans") or []
     rec = {
         "slug": slug, "path": path, "kind": "timeseries", "page_url": url,
-        "frequency": obj.get("frequency"),
+        "frequency": obj.get("frequency") or (qa[0].get("frequency") if qa else None),
+        "graph": (qa[0].get("graph") if qa else None) or "line",
         "views": views,
         "qna": [
             {"question": q.get("question"), "answer": q.get("answer")}
@@ -656,6 +629,33 @@ def add_extra_sections(cat: dict) -> None:
     cat["categories"] = [macro, subs] + cat["categories"] + [tools]
 
 
+def total_points(rec: dict):
+    if rec.get("kind") != "timeseries":
+        return None
+    return sum(len(s["pts"]) for v in rec["views"] for s in v["series"])
+
+
+def shrank(slug: str, rec: dict):
+    """Describe the problem if rec has under half the points of the saved file, else None."""
+    p = winpath(ITEM_DIR / f"{slug}.json")
+    new = total_points(rec)
+    if new is None or not p.exists():
+        return None
+    try:
+        old = total_points(json.loads(p.read_text(encoding="utf-8")))
+    except (json.JSONDecodeError, KeyError, TypeError):
+        return None
+    return f"{new} points vs {old} before" if old and new < 0.5 * old else None
+
+
+def previous_index_size() -> int:
+    p = winpath(OUT_DIR / "index.json")
+    try:
+        return len(json.loads(p.read_text(encoding="utf-8"))["indicators"])
+    except (OSError, json.JSONDecodeError, KeyError):
+        return 0
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", nargs="*", help="only these slugs")
@@ -708,6 +708,12 @@ def main():
 
     for slug, rec in records.items():
         base = cat["indicators"][slug]
+        base["graph"] = rec.get("graph") or base.get("graph", "line")
+        problem = shrank(slug, rec)
+        if problem:  # never overwrite good data with a suddenly much smaller series
+            print(f"FAIL {slug}: new data looks truncated ({problem}); keeping the previous file")
+            failures.append(slug)
+            continue
         wrote = write_if_changed(ITEM_DIR / f"{slug}.json", rec, stamp_key="scraped_at")
         changed += wrote
         s = card_summary(rec, base)
@@ -720,6 +726,10 @@ def main():
     if not args.only and failures:
         print("Index not rewritten because some pages failed; previous index kept.")
     if not args.only and not failures:
+        prev_n = previous_index_size()
+        if prev_n and len(summaries) < 0.9 * prev_n:
+            print(f"Index NOT rewritten: only {len(summaries)} pages found vs {prev_n} before.")
+            sys.exit(1)
         index = {
             "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
             "source": DEFAULT_SOURCE,

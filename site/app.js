@@ -256,6 +256,8 @@ function refresh() {
 
 function destroyChart() { if (S.chart) { S.chart.destroy(); S.chart = null; } }
 
+if (window.Chart) Chart.defaults.font.family = "'IBM Plex Sans', system-ui, sans-serif";
+
 const crosshair = {
   id: 'crosshair',
   afterDatasetsDraw(chart) {
