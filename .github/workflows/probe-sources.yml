@@ -1,0 +1,18 @@
+# One-off check: which data sources can GitHub's servers reach? (Run by hand from the Actions tab.)
+name: Probe source reachability
+on:
+  workflow_dispatch: {}
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Probe
+        run: |
+          UA='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36'
+          while read -r u; do
+            [ -z "$u" ] && continue
+            out=$(curl -sS -o /dev/null -L -m 30 -A "$UA" -w '%{http_code} %{size_download}B %{time_total}s' "$u" 2>&1 | tail -1)
+            echo "$out  $u"
+          done < scraper/probe_hosts.txt
