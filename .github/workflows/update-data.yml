@@ -1,6 +1,6 @@
 # Keeps the data fresh with no manual work.
 #
-# Every 2 hours this re-scrapes the source site and commits only what changed.
+# Hourly: refreshes the daily and weekly series. Four times a day: re-scrapes everything. Commits only what changed.
 # The deployed website reads its data straight from this repository, so new
 # releases (e.g. next month's GST collections) appear within hours of being
 # published, without redeploying the site.
@@ -8,8 +8,13 @@ name: Update data
 
 on:
   schedule:
-    - cron: "20 */2 * * *"   # every 2 hours (UTC); GitHub may start it a few minutes late
-  workflow_dispatch: {}       # "Run workflow" button in the Actions tab
+    - cron: "11 * * * *"          # hourly: only the daily and weekly series (a couple of minutes)
+    - cron: "37 3,9,15,21 * * *"  # four times a day: everything
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "full or fast"
+        default: "full"
 
 permissions:
   contents: write
@@ -29,8 +34,13 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
-      - name: Scrape (fails, and commits nothing, if any page could not be read)
-        run: python scraper/scrape.py
+      - name: Scrape (fails, and commits nothing, if a mirrored page could not be read)
+        run: |
+          if [ "${{ github.event.schedule }}" = "11 * * * *" ] || [ "${{ inputs.mode }}" = "fast" ]; then
+            python scraper/scrape.py --fast
+          else
+            python scraper/scrape.py
+          fi
       - name: Commit changes, if any
         run: |
           git config user.name "data-bot"

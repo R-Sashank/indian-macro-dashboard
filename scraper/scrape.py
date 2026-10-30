@@ -675,11 +675,68 @@ def previous_index_size() -> int:
         return 0
 
 
+# Daily/weekly official series refreshed by the hourly "fast" job (the rest wait for the full run).
+FAST_SLUGS = {
+    "india-vix", "neer-bis", "tbill-cutoff-yields", "call-money-rate",
+    "power-generation-daily", "coal-stock-power-plants-daily", "renewable-generation-daily",
+}
+
+
+def run_fast() -> int:
+    """Refresh only FAST_SLUGS and patch their entries into the existing index (nothing else is touched)."""
+    prev = load_previous_index()
+    if not prev.get("indicators"):
+        print("No previous index; run the full job first.")
+        return 1
+    registry = sources.load_all()
+    http = sources.Http()
+    now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    warnings, changed = [], 0
+    for slug in sorted(FAST_SLUGS):
+        b, old = registry.get(slug), prev["indicators"].get(slug)
+        if not b or not old:
+            warnings.append((slug, "not registered or not in the index yet; waits for the full run"))
+            continue
+        try:
+            rec = b.fn(http)
+            sources.base.validate(rec)
+            rec["scraped_at"] = now
+            problem = shrank(slug, rec)
+            if problem:
+                raise ValueError(f"new data looks truncated ({problem})")
+            changed += write_if_changed(ITEM_DIR / f"{slug}.json", rec, stamp_key="scraped_at")
+            base = {"name": old["name"], "path": old["path"], "graph": old.get("graph", "line"),
+                    "categories": old["categories"], "frequency": old.get("frequency")}
+            prev["indicators"][slug] = card_summary(rec, base)
+            print(f"ok   {slug}: latest {prev['indicators'][slug]['latest_date']}")
+        except Exception as e:  # noqa: BLE001
+            print(f"WARN {slug}: {type(e).__name__}: {e}")
+            warnings.append((slug, f"{type(e).__name__}: {e}"[:300]))
+    prev["generated_at"] = now
+    write_if_changed(OUT_DIR / "index.json", prev, stamp_key="generated_at")
+    try:
+        health = json.loads(winpath(OUT_DIR / "health.json").read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        health = {"added_ok": [], "added_failing": []}
+    failing = {w[0] for w in warnings}
+    health["added_failing"] = [f for f in health.get("added_failing", []) if f["slug"] not in FAST_SLUGS] +         [{"slug": slug, "error": err} for slug, err in warnings if slug in FAST_SLUGS]
+    health["added_ok"] = sorted(set(health.get("added_ok", [])) - failing | (FAST_SLUGS - failing))
+    health["generated_at"] = now
+    write_if_changed(OUT_DIR / "health.json", health, stamp_key="generated_at")
+    for slug, err in warnings:
+        print(f"::warning title=Source problem::{slug}: {err}")
+    print(f"fast refresh done: {changed} files changed, {len(warnings)} warnings")
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", nargs="*", help="only these slugs")
     ap.add_argument("--no-added", action="store_true", help="skip the official-source indicators")
+    ap.add_argument("--fast", action="store_true", help="refresh only the daily/weekly official series (hourly job)")
     args = ap.parse_args()
+    if args.fast:
+        sys.exit(run_fast())
 
     winpath(ITEM_DIR).mkdir(parents=True, exist_ok=True)
     cat = discover()

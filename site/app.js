@@ -44,23 +44,33 @@ const freqLabel = (f) => FREQ[f] || '';
 
 /* ---------------------------------------------------------------- data */
 
-async function getJSON(url) {
-  const r = await fetch(url);
-  if (!r.ok) throw new Error(`${url}: ${r.status}`);
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function getJSON(url, attempt = 0) {
+  // retries bypass the browser cache, which can hold a failed or partial earlier response
+  const u = attempt > 0 ? `${url}${url.includes('?') ? '&' : '?'}r=${Date.now()}` : url;
+  const r = await fetch(u, attempt > 0 ? { cache: 'no-store' } : {});
+  if (!r.ok) throw new Error(`HTTP ${r.status}`);
   return r.json();
 }
-/** Load a data file from the configured remote base, falling back to the bundled copy. */
+
+/** Load a data file: GitHub first, then the copy bundled with the site; retried a few times. */
 async function getData(path) {
   const bases = window.DATA_BASE ? [window.DATA_BASE, 'data/'] : ['data/'];
-  let last;
-  for (const b of bases) {
-    try {
-      const data = await getJSON(b + path);
-      if (path === 'index.json') DATA_SOURCE = b === 'data/' ? (window.DATA_BASE ? 'bundled' : 'local') : 'live';
-      return data;
-    } catch (e) { last = e; }
+  const errors = [];
+  for (let attempt = 0; attempt < 3; attempt++) {
+    for (const b of bases) {
+      try {
+        const data = await getJSON(b + path, attempt);
+        if (path === 'index.json') DATA_SOURCE = b === 'data/' ? (window.DATA_BASE ? 'bundled' : 'local') : 'live';
+        return data;
+      } catch (e) { errors.push(`${b.startsWith('http') ? 'GitHub' : 'site'}: ${e.message}`); }
+    }
+    await sleep(500 * (attempt + 1));
   }
-  throw last;
+  const err = new Error(errors.join(' | '));
+  err.attempts = errors;
+  throw err;
 }
 async function getRec(slug) {
   if (!CACHE.has(slug)) CACHE.set(slug, getData(`i/${slug}.json`).catch((e) => { CACHE.delete(slug); throw e; }));
@@ -181,7 +191,10 @@ function setupSearch() {
 async function openIndicator(slug) {
   let rec;
   try { rec = await getRec(slug); } catch (e) {
-    $('#app').innerHTML = `<p class="empty">Could not load “${esc(slug)}”. <a href="#/">Back to all indicators</a></p>`;
+    $('#app').innerHTML = `<div class="empty"><p>Could not load “${esc(slug)}”.</p>
+      <p class="muted" style="font-size:13px">${esc(String(e.message || e).slice(0, 300))}</p>
+      <p><button class="btn primary" id="retry">Try again</button> &nbsp; <a href="#/">Back to all indicators</a></p></div>`;
+    $('#retry')?.addEventListener('click', () => openIndicator(slug));
     return;
   }
   destroyChart();
@@ -640,7 +653,7 @@ async function boot() {
   const when = new Date(IDX.generated_at).toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' });
   $('#foot-meta').textContent = DATA_SOURCE === 'bundled'
     ? `Warning: live data could not be reached, so this page is showing a saved copy from ${when}. Reload later for the latest.`
-    : `Latest data update: ${when}${DATA_SOURCE === 'live' ? ' (live, checked every 2 hours).' : '.'}`;
+    : `Latest data update: ${when}${DATA_SOURCE === 'live' ? ' (live).' : '.'} Each source publishes with its own delay, so daily series typically run 1-3 days behind today.`;
   try {
     const health = await getData('health.json');
     const failing = (health.added_failing || []).filter((f) => !String(f.slug).startsWith('module:'));
