@@ -197,13 +197,21 @@ async function openIndicator(slug) {
   const head = rec.headline && (rec.headline.Absolute || Object.values(rec.headline)[0]);
   const related = (rec.related || []).filter((r) => r.slug !== slug).map((r) =>
     IDX.indicators[r.slug] ? `<a class="chip" href="#/i/${r.slug}">${esc(titleOf(r.slug))}</a>` : `<span class="chip plain">${esc(r.title || r.slug)}</span>`).join('');
-  const qna = (rec.qna || []).map((q) => `<div><h2>${esc(q.question)}</h2>${String(q.answer || '').split('^').map((p) => `<p>${esc(p)}</p>`).join('')}</div>`).join('');
+  const longDesc = !head && rec.description && rec.description.length > 220;
+  const firstSentence = (t) => {
+    const m = t.match(/^(.{40,430}?(?<!\bRs)(?<!\bUS)(?<!\bNo)(?<!\bvs)(?<!\be\.g)(?<!\bi\.e)[.!?])(\s|$)/);
+    if (m) return m[1];
+    const cut = t.slice(0, 260), k = Math.max(cut.lastIndexOf(', '), cut.lastIndexOf('; '));
+    return (k > 80 ? cut.slice(0, k) : cut.replace(/\s+\S*$/, '')) + '…';
+  };
+  const aboutHtml = longDesc ? `<div><h2>About this indicator</h2><p>${esc(rec.description)}</p></div>` : '';
+  const qna = aboutHtml + (rec.qna || []).map((q) => `<div><h2>${esc(q.question)}</h2>${String(q.answer || '').split('^').map((p) => `<p>${esc(p)}</p>`).join('')}</div>`).join('');
 
   $('#app').innerHTML = `
     <div class="detail">
       <nav class="crumbs"><a href="#/">All indicators</a>${idx.categories?.[0] ? ` &nbsp;/&nbsp; <a href="#/c/${idx.categories[0]}">${esc(catName(idx.categories[0]))}</a>` : ''}</nav>
       <h1>${esc(rec.title || idx.name)}</h1>
-      ${head ? `<p class="headline">${esc(head)}</p>` : rec.description ? `<p class="headline">${esc(rec.description)}</p>` : ''}
+      ${head ? `<p class="headline">${esc(head)}</p>` : rec.description ? `<p class="headline">${esc(longDesc ? firstSentence(rec.description) : rec.description)}</p>` : ''}
       <div class="chips">${cats}${freqLabel(rec.frequency) ? `<span class="chip plain">${freqLabel(rec.frequency)}</span>` : ''}</div>
       ${rec.quality_note ? `<div class="note"><strong>Data check:</strong> ${esc(rec.quality_note)}</div>` : ''}
       ${rec.note ? `<div class="info"><strong>About this series:</strong> ${esc(rec.note)}</div>` : ''}
