@@ -641,6 +641,15 @@ async function boot() {
   $('#foot-meta').textContent = DATA_SOURCE === 'bundled'
     ? `Warning: live data could not be reached, so this page is showing a saved copy from ${when}. Reload later for the latest.`
     : `Latest data update: ${when}${DATA_SOURCE === 'live' ? ' (live, checked every 2 hours).' : '.'}`;
+  try {
+    const health = await getData('health.json');
+    const failing = (health.added_failing || []).filter((f) => !String(f.slug).startsWith('module:'));
+    if (failing.length) {
+      const names = failing.map((f) => IDX.indicators[f.slug]?.name || f.slug);
+      const el = document.getElementById('foot-meta');
+      el.textContent += ` ${failing.length} source${failing.length > 1 ? 's' : ''} failed in the last refresh and show earlier data: ${names.slice(0, 6).join('; ')}${names.length > 6 ? '…' : ''}.`;
+    }
+  } catch (e) { /* health file is optional */ }
   setupSearch();
   route();
 }
