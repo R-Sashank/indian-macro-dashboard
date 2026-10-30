@@ -1,4 +1,5 @@
-# One-off check: which data sources can GitHub's servers reach? (Run by hand from the Actions tab.)
+# One-off check, run by hand from the Actions tab: can GitHub's servers reach every data URL
+# the source modules use? (Many Indian government hosts block overseas cloud servers.)
 name: Probe source reachability
 on:
   workflow_dispatch: {}
@@ -8,11 +9,9 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
-      - name: Probe
-        run: |
-          UA='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36'
-          while read -r u; do
-            [ -z "$u" ] && continue
-            out=$(curl -sS -o /dev/null -L -m 30 -A "$UA" -w '%{http_code} %{size_download}B %{time_total}s' "$u" 2>&1 | tail -1)
-            echo "$out  $u"
-          done < scraper/probe_hosts.txt
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python scraper/probe_urls.py

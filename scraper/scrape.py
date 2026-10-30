@@ -29,11 +29,13 @@ from pathlib import Path
 
 import requests
 
+import sources
+
 BASE = "https://indiamacroindicators.co.in"
 ROOT = Path(__file__).resolve().parent.parent
 OUT_DIR = ROOT / "site" / "data"
 ITEM_DIR = OUT_DIR / "i"
-DEFAULT_SOURCE = "CMIE Economic Outlook, 1 Finance Research"
+DEFAULT_SOURCE = None  # legacy pages show no source credit; indicators from scraper/sources name their own
 EPOCH = datetime(1970, 1, 1, tzinfo=timezone.utc)
 
 HEADERS = {
@@ -234,8 +236,8 @@ def page_common(html: str, payload: str) -> dict:
         "description": ld.get("description")
         or (md.group(1).replace("&#x27;", "'").replace("&amp;", "&") if md else None),
         "headline": variants,
-        "source": ld.get("creditText") or DEFAULT_SOURCE,
-        "source_url": ld.get("isBasedOn"),
+        "source": None,
+        "source_url": None,
         "date_modified": ld.get("dateModified"),
     }
 
@@ -648,6 +650,23 @@ def shrank(slug: str, rec: dict):
     return f"{new} points vs {old} before" if old and new < 0.5 * old else None
 
 
+def load_previous_index() -> dict:
+    try:
+        return json.loads(winpath(OUT_DIR / "index.json").read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
+# Notes for existing pages whose source data has a known defect (shown as a banner on the page).
+LEGACY_NOTES = {
+    "index-of-industrial-production-iip-8-core-industries": (
+        "The level series switches base year between Feb 2023 (base 2011-12, 147.3) and Mar 2023 (base 2022-23, 103.6), "
+        "so levels before and after are not comparable. Growth rates are unaffected. "
+        "Compare levels only within each base; the individual core-industry pages carry both bases separately."
+    ),
+}
+
+
 def previous_index_size() -> int:
     p = winpath(OUT_DIR / "index.json")
     try:
@@ -659,6 +678,7 @@ def previous_index_size() -> int:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", nargs="*", help="only these slugs")
+    ap.add_argument("--no-added", action="store_true", help="skip the official-source indicators")
     args = ap.parse_args()
 
     winpath(ITEM_DIR).mkdir(parents=True, exist_ok=True)
@@ -689,6 +709,47 @@ def main():
             failures.append(slug)
         time.sleep(0.4)
 
+    # ---- indicators built from official sources (scraper/sources/*.py). Each builder runs on
+    # its own: a failure keeps that indicator's previous data and is reported as a warning, so
+    # one flaky government site never blocks the rest.
+    added_slugs, warnings = set(), []
+    prev_index = load_previous_index()
+    if not args.no_added:
+        registry = sources.load_all()
+        for name, err in sources.IMPORT_ERRORS.items():
+            print(f"WARN sources/{name}.py could not be imported: {err}")
+            warnings.append((f"module:{name}", err))
+        http = sources.Http()
+        for slug, b in registry.items():
+            if args.only and slug not in args.only:
+                continue
+            cat["indicators"][slug] = {"slug": slug, "name": b.name, "path": "official", "categories": [b.section],
+                                       "graph": b.graph, "frequency": None, "scraper": "added"}
+            added_slugs.add(slug)
+            try:
+                rec = b.fn(http)
+                sources.base.validate(rec)
+                if rec["slug"] != slug:
+                    raise ValueError(f"record slug {rec['slug']!r} != registered slug {slug!r}")
+                rec["scraped_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+                records[slug] = rec
+                print(f"ok   {slug}")
+            except Exception as e:  # noqa: BLE001
+                print(f"WARN {slug}: {type(e).__name__}: {e}")
+                warnings.append((slug, f"{type(e).__name__}: {e}"[:300]))
+            time.sleep(0.2)
+        if sources.IMPORT_ERRORS:  # keep entries of modules that failed to import
+            for slug, v in prev_index.get("indicators", {}).items():
+                if v.get("path") == "official" and slug not in cat["indicators"]:
+                    cat["indicators"][slug] = {"slug": slug, "name": v["name"], "path": "official",
+                                               "categories": v["categories"], "graph": v.get("graph", "line"),
+                                               "frequency": v.get("frequency"), "scraper": "added"}
+                    added_slugs.add(slug)
+        # legacy pages that a newer official series replaces get a pointer to it
+        for old, new in sources.base.SUPERSEDES.items():
+            if old in records and new in records:
+                records[old]["superseded_by"] = {"slug": new, "title": registry[new].name}
+
     # Flag pages whose data is byte-identical to another indicator's (the
     # source site has at least one such case); mirror it, but say so.
     by_fp = {}
@@ -696,6 +757,9 @@ def main():
         if rec["kind"] == "timeseries" and rec["views"] and rec["views"][0]["series"][0]["pts"]:
             fp = json.dumps([s["pts"] for v in rec["views"] for s in v["series"]], separators=(",", ":"))
             by_fp.setdefault(fp, []).append(slug)
+    for slug, note in LEGACY_NOTES.items():
+        if slug in records:
+            records[slug]["quality_note"] = note
     for slugs in by_fp.values():
         if len(slugs) > 1:
             for slug in slugs:
@@ -711,8 +775,8 @@ def main():
         base["graph"] = rec.get("graph") or base.get("graph", "line")
         problem = shrank(slug, rec)
         if problem:  # never overwrite good data with a suddenly much smaller series
-            print(f"FAIL {slug}: new data looks truncated ({problem}); keeping the previous file")
-            failures.append(slug)
+            print(f"{'WARN' if slug in added_slugs else 'FAIL'} {slug}: new data looks truncated ({problem}); keeping the previous file")
+            (warnings if slug in added_slugs else failures).append(slug if slug not in added_slugs else (slug, f"truncated: {problem}"))
             continue
         wrote = write_if_changed(ITEM_DIR / f"{slug}.json", rec, stamp_key="scraped_at")
         changed += wrote
@@ -722,6 +786,28 @@ def main():
         summaries[slug] = s
         print(f"{'NEW ' if wrote else 'same'} {slug}: {s['n_points']} pts, latest {s['latest_date']} = {s['latest_value']} {s['units'] or ''}"
               + ("  [DUPLICATE DATA FLAGGED]" if rec.get("quality_note") else ""))
+
+    # keep the previous version of any added indicator that failed this run
+    for slug in sorted(added_slugs):
+        if slug not in summaries:
+            prev = prev_index.get("indicators", {}).get(slug)
+            if prev and winpath(ITEM_DIR / f"{slug}.json").exists():
+                summaries[slug] = prev
+            else:
+                cat["indicators"].pop(slug, None)
+    for sec, meta in sources.SECTIONS.items():
+        slugs = [s for s, b in cat["indicators"].items()
+                 if b.get("scraper") == "added" and b["categories"] == [sec] and s in summaries]
+        if slugs:
+            cat["categories"].append({"slug": sec, "name": meta["name"], "description": meta["description"],
+                                      "group": "added", "indicators": slugs})
+    if not args.only and not args.no_added:
+        health = {"generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                  "added_ok": sorted(s for s in added_slugs if s in records),
+                  "added_failing": [{"slug": s, "error": e} for s, e in warnings]}
+        write_if_changed(OUT_DIR / "health.json", health, stamp_key="generated_at")
+    for slug, err in warnings:
+        print(f"::warning title=Source problem::{slug}: {err}")
 
     if not args.only and failures:
         print("Index not rewritten because some pages failed; previous index kept.")

@@ -98,6 +98,9 @@ a:hover { text-decoration: underline; }
 .pill:hover { border-color: var(--accent); color: var(--ink); text-decoration: none; }
 .pill.on { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 
+.group-head { margin-top: 44px; padding-top: 22px; border-top: 2px solid var(--cta); }
+.group-head h2 { margin: 0 0 4px; font-family: var(--font-head); font-weight: 600; font-size: 30px; letter-spacing: -0.01em; }
+.group-head p { margin: 0; color: var(--ink-2); max-width: 80ch; }
 .cat { padding-top: 22px; }
 .cat-head { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 6px 16px; margin-bottom: 12px; }
 .cat-head h2 { margin: 0; font-family: var(--font-head); font-weight: 600; font-size: 25px; letter-spacing: -0.01em; }
@@ -127,6 +130,9 @@ a:hover { text-decoration: underline; }
 .chip.plain { background: transparent; border-color: var(--border); color: var(--ink-2); }
 a.chip:hover { text-decoration: none; border-color: var(--accent); }
 .note { background: var(--warn-bg); color: var(--warn-ink); border: 1px solid var(--warn-border); border-radius: 10px; padding: 10px 14px; margin: 0 0 14px; font-size: 14px; }
+
+.info { background: var(--accent-soft); color: var(--ink-2); border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; margin: 0 0 14px; font-size: 14px; max-width: 100ch; }
+.info strong { color: var(--ink); }
 
 .panel { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 16px 18px 14px; box-shadow: var(--shadow); }
 .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }

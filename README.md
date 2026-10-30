@@ -32,6 +32,29 @@ the editorial reports/blogs/authors pages (text, not data).
 - `site/` is a static site (no build step): Chart.js for charts, SheetJS to
   build Excel files in the browser so downloads always match the data shown.
 
+## Two layers of data
+
+1. **The mirrored pages** (143): scraped by `scraper/scrape.py` from the page payloads of the source site, categorised as that
+   site categorises them. They carry no source credit on screen.
+2. **Added indicators from primary sources**: payments and administrative data, power and fuel, IIP and core sectors, vehicles,
+   aviation, rail and ports, surveys, financial conditions, trade detail, labour and prices. Each lives in a module under
+   `scraper/sources/` that registers one builder per indicator (`@register(...)`, see `scraper/sources/base.py`). Each page names
+   its own source beside the chart. Rules for every builder: finest available frequency (daily, then weekly, then monthly; a
+   coarser long series is added as a second view); raise instead of returning partial data; keep the previous data if a source
+   fails (a warning, never a broken site); TLS verification is never disabled.
+
+Useful commands:
+
+```
+python scraper/run_source.py                       # list registered indicators
+python scraper/run_source.py --module payments     # build, validate and summarise one module (writes nothing)
+python scraper/probe_urls.py                       # is every source URL reachable from here?
+python scraper/scrape.py --no-added                # only the mirrored pages
+```
+
+The "Probe source reachability" workflow (Actions tab) runs the same URL check from GitHub's servers, because some Indian
+government hosts block overseas cloud servers. A source that works on a PC can still fail in the scheduled job.
+
 ## Run locally
 
 ```
@@ -58,8 +81,7 @@ if you want local auto-refresh.
 
 Only code changes (anything in `site/` outside `site/data`) redeploy the site.
 
-## Credit and use
+## Use
 
-Data credit on every page and in every download: **CMIE Economic Outlook,
-1 Finance Research**. This mirror is for personal research; check the source
-site's terms before making it public.
+Private research dashboard (it is behind a Netlify login). Indicators from primary sources name their source on the page and in
+the Info sheet of every download.

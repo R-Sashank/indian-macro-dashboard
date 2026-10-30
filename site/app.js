@@ -6,7 +6,7 @@ const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '
 const cssv = (n) => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-const FREQ = { D: 'Daily', W: 'Weekly', M: 'Monthly', Q: 'Quarterly', A: 'Annual' };
+const FREQ = { D: 'Daily', W: 'Weekly', F: 'Fortnightly', M: 'Monthly', B: 'Bi-monthly', Q: 'Quarterly', A: 'Annual' };
 const RANGES = [['1', '1Y'], ['5', '5Y'], ['10', '10Y'], ['max', 'MAX']];
 const TABLE_ROWS = 1000;
 
@@ -33,7 +33,12 @@ function fmtDate(ts, freq) {
   return `${d.getUTCDate()} ${m} ${y}`;
 }
 /** On-page credit names CMIE only; the full credit stays in the footer and in downloaded files. */
-const srcShort = (s) => String(s || IDX.source).replace(/,\s*1 Finance Research/i, '');
+/** Source line: only indicators that name a source show one (existing pages carry none). */
+function sourceHtml(rec) {
+  if (!rec.source) return '';
+  const name = esc(rec.source);
+  return `Source: ${rec.source_url ? `<a href="${esc(rec.source_url)}" target="_blank" rel="noopener">${name}</a>` : name}`;
+}
 const isoDay = (ts) => new Date(ts * 1000).toISOString().slice(0, 10);
 const freqLabel = (f) => FREQ[f] || '';
 
@@ -105,7 +110,12 @@ function showHome(scrollTo) {
   document.title = 'Indian Macro Dashboard';
   const total = Object.keys(IDX.indicators).length;
   const pills = IDX.categories.map((c) => `<a class="pill" href="#/c/${c.slug}" data-c="${c.slug}">${esc(c.name)}</a>`).join('');
-  const sections = IDX.categories.map((c) => `
+  let prevGroup = null;
+  const GROUP_HEAD = `<div class="group-head"><h2>Additional indicators</h2><p>Daily, weekly and monthly series from primary sources: payments, administrative records, power and fuel, vehicles and freight, surveys, financial conditions and trade detail. Each names its source beside the chart.</p></div>`;
+  const sections = IDX.categories.map((c) => {
+    const gh = c.group === 'added' && prevGroup !== 'added' ? GROUP_HEAD : '';
+    prevGroup = c.group || null;
+    return gh + `
     <section class="cat" id="cat-${c.slug}">
       <div class="cat-head">
         <h2>${esc(c.name)}</h2><span class="count">${c.indicators.length} indicators</span>
@@ -113,7 +123,8 @@ function showHome(scrollTo) {
         ${c.description ? `<p>${esc(c.description)}</p>` : ''}
       </div>
       <div class="grid">${c.indicators.map(cardHtml).join('')}</div>
-    </section>`).join('');
+    </section>`;
+  }).join('');
   $('#app').innerHTML = `
     <section class="hero">
       <h1>India's high-frequency economic indicators</h1>
@@ -179,6 +190,8 @@ async function openIndicator(slug) {
   const idx = IDX.indicators[slug] || {};
   document.title = `${rec.title || idx.name} · Indian Macro Dashboard`;
   const ix = indexExtras(rec);
+  const sup = rec.superseded_by && IDX.indicators[rec.superseded_by.slug]
+    ? `<div class="note"><strong>Newer data available:</strong> this series stopped updating at its source. <a href="#/i/${rec.superseded_by.slug}">${esc(rec.superseded_by.title)}</a> carries more recent figures.</div>` : '';
 
   const cats = (idx.categories || []).map((c) => `<a class="chip" href="#/c/${c}">${esc(catName(c))}</a>`).join('');
   const head = rec.headline && (rec.headline.Absolute || Object.values(rec.headline)[0]);
@@ -193,13 +206,15 @@ async function openIndicator(slug) {
       ${head ? `<p class="headline">${esc(head)}</p>` : rec.description ? `<p class="headline">${esc(rec.description)}</p>` : ''}
       <div class="chips">${cats}${freqLabel(rec.frequency) ? `<span class="chip plain">${freqLabel(rec.frequency)}</span>` : ''}</div>
       ${rec.quality_note ? `<div class="note"><strong>Data check:</strong> ${esc(rec.quality_note)}</div>` : ''}
+      ${rec.note ? `<div class="info"><strong>About this series:</strong> ${esc(rec.note)}</div>` : ''}
+      ${sup}
       ${ix.top}
       <section class="panel">
         <div class="controls" id="controls"></div>
         <div class="stats" id="stats"></div>
         <div class="legend" id="legend"></div>
         <div class="chartwrap${rec.kind === 'curve' ? ' curve' : ''}"><canvas id="chart" role="img" aria-label="Chart of ${esc(rec.title || '')}"></canvas></div>
-        <div class="foot-row"><span id="asof"></span><span>Source: ${esc(srcShort(rec.source))}</span></div>
+        <div class="foot-row"><span id="asof"></span><span>${sourceHtml(rec)}</span></div>
         <div id="tablebox"></div>
       </section>
       ${ix.bottom}
@@ -292,6 +307,7 @@ function baseOptions(unitsText) {
 
 function drawTimeseries() {
   const rec = S.rec, view = rec.views[S.view], cut = cutoffMs(rec);
+  const freq = view.frequency || rec.frequency;
   const idx = IDX.indicators[rec.slug] || {};
   const colors = ['--s1', '--s2', '--s3', '--s4', '--s5', '--s6'].map(cssv);
   const series = view.series.map((s) => ({ s, pts: s.pts.filter((p) => p[0] * 1000 >= cut) }));
@@ -304,7 +320,7 @@ function drawTimeseries() {
   $('#stats').innerHTML = series.map((x, i) => {
     const last = x.pts[x.pts.length - 1];
     return `<div class="stat"><div class="big">${last ? fmtNum(last[1]) : '–'}<span class="u">${esc(x.s.units === 'Per cent' ? '%' : unitsDisp(x.s.units))}</span></div>
-      <div class="lab">${series.length > 1 ? `<span class="sw" style="background:${colors[i % 6]}"></span>` : ''}${esc(x.s.name === 'Value' || x.s.name === 'YoY change' ? (view.label || x.s.name) : x.s.name)}${last ? ' · ' + fmtDate(last[0], rec.frequency) : ''}</div></div>`;
+      <div class="lab">${series.length > 1 ? `<span class="sw" style="background:${colors[i % 6]}"></span>` : ''}${esc(x.s.name === 'Value' || x.s.name === 'YoY change' ? (view.label || x.s.name) : x.s.name)}${last ? ' · ' + fmtDate(last[0], freq) : ''}</div></div>`;
   }).join('');
   const lg = $('#legend');
   lg.innerHTML = series.length > 1
@@ -327,7 +343,7 @@ function drawTimeseries() {
   };
   opts.plugins.decimation = { enabled: !asBar, algorithm: 'lttb', samples: 1200 };
   opts.plugins.tooltip.callbacks = {
-    title: (items) => (items[0] ? fmtDate(items[0].parsed.x / 1000, rec.frequency) : ''),
+    title: (items) => (items[0] ? fmtDate(items[0].parsed.x / 1000, freq) : ''),
     label: (c) => ` ${c.dataset.label}: ${fmtVal(c.parsed.y, series[c.datasetIndex].s.units)}`,
   };
   destroyChart();
@@ -335,7 +351,7 @@ function drawTimeseries() {
   S.chart = new Chart($('#chart'), { type: asBar ? 'bar' : 'line', data: { datasets }, options: opts, plugins: [crosshair] });
 
   const lastTs = Math.max(...view.series.map((s) => (s.pts.length ? s.pts[s.pts.length - 1][0] : -Infinity)));
-  $('#asof').textContent = `Data through ${fmtDate(lastTs, rec.frequency)} · refreshed ${new Date(rec.scraped_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}`;
+  $('#asof').textContent = `Data through ${fmtDate(lastTs, freq)} · refreshed ${new Date(rec.scraped_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}`;
 }
 
 function drawCurve() {
@@ -416,7 +432,7 @@ function openTablePage(rec) {
         <span class="sp"></span><button class="btn" id="csvbtn">CSV</button><button class="btn primary" id="xlsxbtn">Download Excel</button>
       </div>
       <div class="tablewrap big tbl2" id="tbl"></div>
-      <div class="foot-row"><span id="asof">${rec.as_of ? `As of ${esc(rec.as_of)} · ` : ''}refreshed ${new Date(rec.scraped_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</span><span>Source: ${esc(srcShort(rec.source))}</span></div>
+      <div class="foot-row"><span id="asof">${rec.as_of ? `As of ${esc(rec.as_of)} · ` : ''}refreshed ${new Date(rec.scraped_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</span><span>${sourceHtml(rec)}</span></div>
     </section>
     ${notes ? `<section class="about"><div>${notes}</div></section>` : ''}
   </div>`;
@@ -518,8 +534,8 @@ function infoSheet(rec, rangeText, rows) {
     ['Frequency', freqLabel(rec.frequency) || ''],
     ['Range exported', rangeText],
     ['Rows', rows],
-    ['Source', rec.source || IDX.source],
-    ['Original page', rec.page_url],
+    ...(rec.source ? [['Source', rec.source]] : []),
+    ...(rec.source_url ? [['Source link', rec.source_url]] : []),
     ['Mirrored at (UTC)', rec.scraped_at],
     ['Data check', rec.quality_note || ''],
     ['Description', rec.description || ''],
@@ -578,10 +594,10 @@ async function downloadCategory(btn) {
       while (used.has(n.toLowerCase())) n = `${name.slice(0, 28)} ${k++}`;
       used.add(n.toLowerCase());
       const rows = addDataSheet(wb, n, rec, -Infinity);
-      contents.push([IDX.indicators[slug]?.name || slug, n, freqLabel(rec.frequency), rows, IDX.indicators[slug]?.latest_date || '', rec.source || IDX.source]);
+      contents.push([IDX.indicators[slug]?.name || slug, n, freqLabel(rec.frequency), rows, IDX.indicators[slug]?.latest_date || '', rec.source || '']);
       await new Promise((r) => setTimeout(r, 0));
     }
-    const cw = XLSX.utils.aoa_to_sheet([['Category', cat.name], ['Source', IDX.source], ['Exported', stamp()], [], ...contents]);
+    const cw = XLSX.utils.aoa_to_sheet([['Category', cat.name], ['Exported', stamp()], [], ...contents]);
     cw['!cols'] = [{ wch: 52 }, { wch: 30 }, { wch: 12 }, { wch: 9 }, { wch: 12 }, { wch: 44 }];
     XLSX.utils.book_append_sheet(wb, cw, 'Contents');
     wb.SheetNames.unshift(wb.SheetNames.pop());
